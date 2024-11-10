@@ -1,0 +1,130 @@
+{
+    "hp.usage": {
+        "en": "Usage: %shp <target> <health> [armor] [helmet]",
+        "es": "Uso: %shp <objetivo> <vida> [armadura] [casco]"
+    },
+    "hp.invalid_health": {
+        "en": "Invalid health",
+        "es": "Vida inválida"
+    },
+    "hp.invalid_armor": {
+        "en": "Invalid armor",
+        "es": "Armadura inválida"
+    },
+    "hp.invalid_helmet": {
+        "en": "Invalid helmet (1 or 0)",
+        "es": "Casco inválido (1 o 0)"
+    },
+    "hp.message": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {green}[{red}{HEALTH}{default} HP{green}]{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{green}]{default}."
+    },
+    "hp.message_with_armor": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}."
+    },
+    "hp.message_with_helmet": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} HELMET{green}]{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} CASCO{green}]{default}."
+    },
+    "hp.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {green}[{red}{HEALTH}{default} HP{green}]{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{green}]{default}."
+    },
+    "hp.mult_message_with_armor": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}."
+    },
+    "hp.mult_message_with_helmet": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} HELMET{green}]{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} CASCO{green}]{default}."
+    },
+    "give.usage": {
+        "en": "Usage: %sgive <target> <item> [amount]",
+        "es": "Uso: %sgive <objetivo> <objeto> [cantidad]"
+    },
+    "give.invalid_weapon": {
+        "en": "Invalid weapon",
+        "es": "Arma inválida"
+    },
+    "give.message": {
+        "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_NAME}{default} an {green}{WEAPON}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_NAME}{default} un {green}{WEAPON}{default}."
+    },
+    "give.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_COUNT}{default} players an {green}{WEAPON}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_COUNT}{default} jugadores un {green}{WEAPON}{default}."
+    },
+    "giveitem.usage": {
+        "en": "Usage: %sgiveitem <target> <item>",
+        "es": "Uso: %sgiveitem <objetivo> <objeto>"
+    },
+    "giveitem.invalid_item": {
+        "en": "Invalid item",
+        "es": "Objeto inválido"
+    },
+    "giveitem.message": {
+        "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_NAME}{default} an {green}{ITEM}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_NAME}{default} un {green}{ITEM}{default}."
+    },
+    "giveitem.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_COUNT}{default} players an {green}{ITEM}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_COUNT}{default} jugadores un {green}{ITEM}{default}."
+    },
+    "givemoney.usage": {
+        "en": "Usage: %sgivemoney <target> <amount>",
+        "es": "Uso: %sgivemoney <objetivo> <cantidad>"
+    },
+    "givemoney.invalid_amount": {
+        "en": "Invalid amount",
+        "es": "Cantidad inválida"
+    },
+    "givemoney.message": {
+        "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_NAME}{default} {green}${AMOUNT}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_NAME}{default} {green}${AMOUNT}{default}."
+    },
+    "givemoney.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_COUNT}{default} players {green}${AMOUNT}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_COUNT}{default} jugadores {green}${AMOUNT}{default}."
+    },
+    "setmoney.usage": {
+        "en": "Usage: %ssetmoney <target> <amount>",
+        "es": "Uso: %ssetmoney <objetivo> <cantidad>"
+    },
+    "setmoney.invalid_amount": {
+        "en": "Invalid amount",
+        "es": "Cantidad inválida"
+    },
+    "setmoney.message": {
+        "en": "{green}{ADMIN_NAME}{default} set to {green}{PLAYER_NAME}{default} {green}${AMOUNT}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}${AMOUNT}{default}."
+    },
+    "setmoney.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} set to {green}{PLAYER_COUNT}{default} players {green}${AMOUNT}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}${AMOUNT}{default}."
+    },
+    "melee.usage": {
+        "en": "Usage: %smelee <target>",
+        "es": "Uso: %smelee <objetivo>"
+    },
+    "melee.message": {
+        "en": "{green}{ADMIN_NAME}{default} left {green}{PLAYER_NAME}{default} with a knife.",
+        "es": "{green}{ADMIN_NAME}{default} dejó a {green}{PLAYER_NAME}{default} con un cuchillo."
+    },
+    "melee.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} left {green}{PLAYER_COUNT}{default} players with a knife.",
+        "es": "{green}{ADMIN_NAME}{default} dejó a {green}{PLAYER_COUNT}{default} jugadores con un cuchillo."
+    },
+    "disarm.usage": {
+        "en": "Usage: %sdisarm <target>",
+        "es": "Uso: %sdisarm <objetivo>"
+    },
+    "disarm.message": {
+        "en": "{green}{ADMIN_NAME}{default} disarmed {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} desarmó a {green}{PLAYER_NAME}{default}."
+    },
+    "disarm.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} disarmed {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} desarmó a {green}{PLAYER_COUNT}{default} jugadores."
+    }
+}
