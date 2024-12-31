@@ -1,8 +1,4 @@
 {
-    "console": {
-        "en": "Check your console :P",
-        "es": "Revisa tu consola :P"
-    },
     "console.cant_use": {
         "en": "You can't use this command in the server console.",
         "es": "No puedes usar este comando en la consola del servidor."
@@ -334,5 +330,17 @@
     "swap.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} swapped {green}{PLAYER_COUNT}{default} players to the opposite team.",
         "es": "{green}{ADMIN_NAME}{default} cambió a {green}{PLAYER_COUNT}{default} jugadores al equipo opuesto."
+    },
+    "1up.usage": {
+        "en": "Usage: %s1up <target>",
+        "es": "Uso: %s1up <objetivo>"
+    },
+    "1up.message": {
+        "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_NAME}{default} in his death location.",
+        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_NAME}{default} en donde murió."
+    },
+    "1up.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_COUNT}{default} players in their death location.",
+        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_COUNT}{default} jugadores en donde murieron."
     }
 }

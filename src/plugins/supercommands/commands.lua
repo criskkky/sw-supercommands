@@ -1378,38 +1378,39 @@ commands:Register("1up", function(playerid, args, argsCount, silent, prefix)
     for i = 1, #players do
         local pl = players[i]
         if pl:CBaseEntity().Health <= 0 then
-            -- Respawn
             pl:Respawn()
-            -- Teleport
+
             if pl:GetVar("death_pos") and pl:GetVar("death_rot") then
-                local pos = (pl:GetVar("death_pos"))
-                local rot = (pl:GetVar("death_rot"))
-                print(pl:GetVar("death_pos"))
-                print(pl:GetVar("death_rot"))
-                SetTimeout(2000, function()
-                    pl:CBaseEntity():Teleport(pos, rot, Vector(0,0,0))
-                    -- pl:SetVar("death_pos", nil)
-                    -- pl:SetVar("death_rot", nil)
-                end)
+                local pos_str = pl:GetVar("death_pos")
+                local rot_str = pl:GetVar("death_rot")
+
+                local pos = StringToVector(pos_str)
+                local rot = StringToQAngle(rot_str)
+
+                if pos and rot then
+                    if pos.x ~= 0 or pos.y ~= 0 or pos.z ~= 0 then
+                        pl:CBaseEntity():Teleport(pos, rot, Vector(0, 0, 0))
+                        pl:SetVar("death_pos", nil)
+                        pl:SetVar("death_rot", nil)
+                    end
+                end
             end
         end
     end
-
-    --[[
-        local message = nil
-        if #players > 1 then
-            message = FetchTranslation("supercommands.1up.mult_message")
+    
+    local message = nil
+    if #players > 1 then
+        message = FetchTranslation("supercommands.1up.mult_message")
             :gsub("{ADMIN_NAME}", admin)
             :gsub("{PLAYER_COUNT}", tostring(#players))
-            ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
-        else
-            local pl = players[1]
-            message = FetchTranslation("supercommands.1up.message")
+        ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
+    else
+        local pl = players[1]
+        message = FetchTranslation("supercommands.1up.message")
             :gsub("{ADMIN_NAME}", admin)
             :gsub("{PLAYER_NAME}", pl:CBasePlayerController().PlayerName)
-            ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
-        end
-    ]]
+        ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
+    end
 end)
 
 -- !xyz get own coords
