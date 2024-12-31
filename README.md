@@ -26,6 +26,11 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 2. [Metamod 2.X](https://www.sourcemm.net/downloads.php/?branch=master)
 3. [Swiftly](https://github.com/swiftly-solution/swiftly/releases/latest)
 
+### Dependencies with other plugins 👁️
+| Plugin | Description | Version | URL | Note |
+| --- | --- | --- | --- | --- |
+| Swiftly Admins | Admins management plugin | ANY | [**CLICK HERE**](https://github.com/swiftly-solution/admins) | Already included in Swiftly ✅ |
+
 ### Installation 📦
 1. Download [latest release](https://github.com/criskkky/swiftly_supercommands/releases/latest).
 2. Everything is drag & drop, so i think you can do it.
@@ -60,6 +65,11 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 | `!unbury` | `<target>` | Unbury player | `B` |
 | `!unfreeze` | `<target>` | Unfreeze player | `B` |
 | `!xyz` | `[target]` | Get player coords in-game | `B` |
+
+> [!TIP]<br>
+> Some commands were not developed due already existing in [**Swiftly Admins Commands**](https://github.com/swiftly-solution/admins_commands?tab=readme-ov-file#admin-commands-) plugin.<br>
+> So if you want one of these commands, I recommend to use that plugin mixed with mine.<br>
+> [**-> CLICK HERE TO CHECK 'EM OUT <-**](https://github.com/swiftly-solution/admins_commands?tab=readme-ov-file#admin-commands-)
 
 ### Configuring the plugin 👨🏻‍💻
 - Doesn't need additional config ✅
