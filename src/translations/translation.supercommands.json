@@ -1,346 +1,432 @@
 {
     "console.cant_use": {
         "en": "You can't use this command in the server console.",
-        "es": "No puedes usar este comando en la consola del servidor."
+        "es": "No puedes usar este comando en la consola del servidor.",
+        "ro": "Nu poti folosi aceasta comanda in consola."
     },
     "hp.usage": {
         "en": "Usage: %shp <target> <health> [armor] [helmet]",
-        "es": "Uso: %shp <objetivo> <vida> [armadura] [casco]"
+        "es": "Uso: %shp <objetivo> <vida> [armadura] [casco]",
+        "ro": "Utilizare: %shp <target> <viață> [armură] [casca]"
     },
     "hp.invalid_health": {
         "en": "Invalid health",
-        "es": "Vida inválida"
+        "es": "Vida inválida",
+        "ro": "Viata invalida"
     },
     "hp.invalid_armor": {
         "en": "Invalid armor",
-        "es": "Armadura inválida"
+        "es": "Armadura inválida",
+        "ro": "Armura invalida"
     },
     "hp.invalid_helmet": {
         "en": "Invalid helmet (1 or 0)",
-        "es": "Casco inválido (1 o 0)"
+        "es": "Casco inválido (1 o 0)",
+        "ro": "Cască invalidă (1 sau 0)"
     },
     "hp.message": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {green}[{red}{HEALTH}{default} HP{green}]{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{green}]{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{green}]{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_NAME}{default} la {green}[{red}{HEALTH}{default} HP{green}]{default}."
     },
     "hp.message_with_armor": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_NAME}{default} la {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMURĂ{green}]{default}."
     },
     "hp.message_with_helmet": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} HELMET{green}]{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} CASCO{green}]{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} CASCO{green}]{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_NAME}{default} la {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMURĂ{default} | {yellow}{HELMET}{default} CASCĂ{green}]{default}."
     },
     "hp.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {green}[{red}{HEALTH}{default} HP{green}]{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{green}]{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{green}]{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat la {green}{PLAYER_COUNT}{default} jucători {green}[{red}{HEALTH}{default} HP{green}]{default}."
     },
     "hp.mult_message_with_armor": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{green}]{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_COUNT}{default} la jucători {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMURĂ{green}]{default}."
     },
     "hp.mult_message_with_helmet": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} HELMET{green}]{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} CASCO{green}]{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} CASCO{green}]{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_COUNT}{default} la jucători {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMURĂ{default} | {yellow}{HELMET}{default} CASCĂ{green}]{default}."
     },
     "give.usage": {
         "en": "Usage: %sgive <target> <weapon>",
-        "es": "Uso: %sgive <objetivo> <arma>"
+        "es": "Uso: %sgive <objetivo> <arma>",
+        "ro": "Utilizare: %sgive <target> <arma>"
     },
     "give.invalid_weapon": {
         "en": "Invalid weapon",
-        "es": "Arma inválida"
+        "es": "Arma inválida",
+        "ro": "Arma invalida"
     },
     "give.message": {
         "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_NAME}{default} an {green}{WEAPON}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_NAME}{default} un {green}{WEAPON}{default}."
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_NAME}{default} un {green}{WEAPON}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} i-a dat lui {green}{PLAYER_NAME}{default} un {green}{WEAPON}{default}."
     },
     "give.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_COUNT}{default} players an {green}{WEAPON}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_COUNT}{default} jugadores un {green}{WEAPON}{default}."
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_COUNT}{default} jugadores un {green}{WEAPON}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a dat la {green}{PLAYER_COUNT}{default} jucatori un {green}{WEAPON}{default} "
     },
     "giveitem.usage": {
         "en": "Usage: %sgiveitem <target> <item>",
-        "es": "Uso: %sgiveitem <objetivo> <objeto>"
+        "es": "Uso: %sgiveitem <objetivo> <objeto>",
+        "ro": "Utilizare: %sgiveitem <target> <item>"
     },
     "giveitem.invalid_item": {
         "en": "Invalid item",
-        "es": "Objeto inválido"
+        "es": "Objeto inválido",
+        "ro": "Invalid item"
     },
     "giveitem.message": {
         "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_NAME}{default} an {green}{ITEM}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_NAME}{default} un {green}{ITEM}{default}."
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_NAME}{default} un {green}{ITEM}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} i-a dat lui {green}{PLAYER_NAME}{default} un {green}{ITEM}{default}."
     },
     "giveitem.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_COUNT}{default} players an {green}{ITEM}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_COUNT}{default} jugadores un {green}{ITEM}{default}."
+        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_COUNT}{default} jugadores un {green}{ITEM}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a dat la {green}{PLAYER_COUNT}{default} jucatori un {green}{ITEM}{default} "
     },
     "givemoney.usage": {
         "en": "Usage: %sgivemoney <target> <amount>",
-        "es": "Uso: %sgivemoney <objetivo> <cantidad>"
+        "es": "Uso: %sgivemoney <objetivo> <cantidad>",
+        "ro": "Utilizare: %sgivemoney <target> <cantitate>"
     },
     "givemoney.invalid_amount": {
         "en": "Invalid amount",
-        "es": "Cantidad inválida"
+        "es": "Cantidad inválida",
+        "ro": "Cantitate invalida"
     },
     "givemoney.message": {
         "en": "{green}{ADMIN_NAME}{default} gave {green}${AMOUNT}{default} to {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} le dio {green}${AMOUNT}{default} a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} le dio {green}${AMOUNT}{default} a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} i-a dat {green}${AMOUNT}{default} lui {green}{PLAYER_NAME}{default}"
     },
     "givemoney.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} gave {green}${AMOUNT}{default} to {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} le dio {green}${AMOUNT}{default} a {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} le dio {green}${AMOUNT}{default} a {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a dat {green}${AMOUNT}{default} la {green}{PLAYER_COUNT}{default} jucatori."
     },
     "setmoney.usage": {
         "en": "Usage: %ssetmoney <target> <amount>",
-        "es": "Uso: %ssetmoney <objetivo> <cantidad>"
+        "es": "Uso: %ssetmoney <objetivo> <cantidad>",
+        "ro": "Utilizare: %ssetmoney <target> <cantitate>"
     },
     "setmoney.invalid_amount": {
         "en": "Invalid amount",
-        "es": "Cantidad inválida"
+        "es": "Cantidad inválida",
+        "ro": "Cantitate invalida"
     },
     "setmoney.message": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {yellow}${AMOUNT}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {yellow}${AMOUNT}{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {yellow}${AMOUNT}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} i-a setat {green}${AMOUNT}{default} lui {green}{PLAYER_NAME}{default}"
     },
     "setmoney.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {yellow}${AMOUNT}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {yellow}${AMOUNT}{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {yellow}${AMOUNT}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a dat setat {green}${AMOUNT}{default} la {green}{PLAYER_COUNT}{default} jucatori."
     },
     "takemoney.usage": {
         "en": "Usage: %stakemoney <target> <amount>",
-        "es": "Uso: %stakemoney <objetivo> <cantidad>"
+        "es": "Uso: %stakemoney <objetivo> <cantidad>",
+        "ro": "Utilizare: %stakemoney <target> <cantitate>"
     },
     "takemoney.invalid_amount": {
         "en": "Invalid amount",
-        "es": "Cantidad inválida"
+        "es": "Cantidad inválida",
+        "ro": "Cantitate invalida"
     },
     "takemoney.message": {
         "en": "{green}{ADMIN_NAME}{default} took {red}${AMOUNT}{default} from {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} le quitó {red}${AMOUNT}{default} a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} le quitó {red}${AMOUNT}{default} a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a luat {green}${AMOUNT}{default} de la {green}{PLAYER_NAME}{default}"
     },
     "takemoney.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} took {red}${AMOUNT}{default} from {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} le quitó {red}${AMOUNT}{default} a {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} le quitó {red}${AMOUNT}{default} a {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a luat {green}${AMOUNT}{default} de la {green}{PLAYER_COUNT}{default} jucatori"
     },
     "melee.usage": {
         "en": "Usage: %smelee <target>",
-        "es": "Uso: %smelee <objetivo>"
+        "es": "Uso: %smelee <objetivo>",
+        "ro": "Utilizare: %smelee <target>"
     },
     "melee.message": {
         "en": "{green}{ADMIN_NAME}{default} left {green}{PLAYER_NAME}{default} with a knife.",
-        "es": "{green}{ADMIN_NAME}{default} dejó a {green}{PLAYER_NAME}{default} con un cuchillo."
+        "es": "{green}{ADMIN_NAME}{default} dejó a {green}{PLAYER_NAME}{default} con un cuchillo.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a lasat pe {green}{PLAYER_NAME}{default} doar cu cutitul."
     },
     "melee.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} left {green}{PLAYER_COUNT}{default} players with a knife.",
-        "es": "{green}{ADMIN_NAME}{default} dejó a {green}{PLAYER_COUNT}{default} jugadores con un cuchillo."
+        "es": "{green}{ADMIN_NAME}{default} dejó a {green}{PLAYER_COUNT}{default} jugadores con un cuchillo.",
+        "ro": "{green}{ADMIN_NAME}{default} a lasat {green}{PLAYER_COUNT}{default} jucatori doar cu cutitul."
     },
     "disarm.usage": {
         "en": "Usage: %sdisarm <target>",
-        "es": "Uso: %sdisarm <objetivo>"
+        "es": "Uso: %sdisarm <objetivo>",
+        "ro": "Utilizare: %sdisarm <target>"
     },
     "disarm.message": {
         "en": "{green}{ADMIN_NAME}{default} disarmed {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} desarmó a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} desarmó a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a lasat pe {green}{PLAYER_NAME}{default} doar cu cutitul."
     },
     "disarm.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} disarmed {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} desarmó a {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} desarmó a {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a lasat {green}{PLAYER_COUNT}{default} jucatori doar cu cutitul."
     },
     "respawn.usage": {
         "en": "Usage: %srespawn <target>",
-        "es": "Uso: %srespawn <objetivo>"
+        "es": "Uso: %srespawn <objetivo>",
+         "ro": "Utilizare: %srespawn <target>"
     },
     "respawn.message": {
         "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a respawnat pe {green}{PLAYER_NAME}{default}."
     },
     "respawn.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a respawnat {green}{PLAYER_COUNT}{default} jucatori."
     },
     "rr.usage": {
         "en": "Usage: %srr [time]",
-        "es": "Uso: %srr [tiempo]"
+        "es": "Uso: %srr [tiempo]",
+        "ro": "Utilizare: %srr [timp]"
     },
     "rr.message": {
         "en": "{green}{ADMIN_NAME}{default} called a round restart in {red}{TIME}{default} seconds.",
-        "es": "{green}{ADMIN_NAME}{default} llamó a un reinicio de ronda en {red}{TIME}{default} segundos."
+        "es": "{green}{ADMIN_NAME}{default} llamó a un reinicio de ronda en {red}{TIME}{default} segundos.",
+        "ro": "{green}{ADMIN_NAME}{default} va restarta runda in {red}{TIME}{default} secunde."
     },
     "rg.usage": {
         "en": "Usage: %srg [time]",
-        "es": "Uso: %srg [tiempo]"
+        "es": "Uso: %srg [tiempo]",
+        "ro": "Utilizare: %srg [timp]"
     },
     "rg.message": {
         "en": "{green}{ADMIN_NAME}{default} called a game restart in {red}{TIME}{default} seconds.",
-        "es": "{green}{ADMIN_NAME}{default} llamó a un reinicio de partida en {red}{TIME}{default} segundos."
+        "es": "{green}{ADMIN_NAME}{default} llamó a un reinicio de partida en {red}{TIME}{default} segundos.",
+        "ro": "{green}{ADMIN_NAME}{default} va restarta meciul in {red}{TIME}{default} secunde."
     },
     "tp.usage": {
         "en": "Usage: %stp <player1> <player2>",
-        "es": "Uso: %stp <jugador1> <jugador2>"
+        "es": "Uso: %stp <jugador1> <jugador2>",
+        "ro": "Utilizare: %stp <jucator1> <jucator2>"
     },
     "tp.message": {
         "en": "{green}{ADMIN_NAME}{default} teleported {green}{PLAYER1}{default} to {green}{PLAYER2}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} teletransportó a {green}{PLAYER1}{default} a {green}{PLAYER2}{default}."
+        "es": "{green}{ADMIN_NAME}{default} teletransportó a {green}{PLAYER1}{default} a {green}{PLAYER2}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a teleportat pe {green}{PLAYER1}{default} la {green}{PLAYER2}{default}."
     },
     "goto.usage": {
         "en": "Usage: %sgoto <target>",
-        "es": "Uso: %sgoto <objetivo>"
+        "es": "Uso: %sgoto <objetivo>",
+        "ro": "Utilizare: %sgoto <target>"
     },
     "goto.message": {
         "en": "{green}{ADMIN_NAME}{default} teleported to {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} se teletransportó a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} se teletransportó a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} s-a teleportat la {green}{PLAYER_NAME}{default}."
     },
     "bring.usage": {
         "en": "Usage: %sbring <target>",
-        "es": "Uso: %sbring <objetivo>"
+        "es": "Uso: %sbring <objetivo>",
+        "ro": "Utilizare: %sbring <target>"
     },
     "bring.message": {
         "en": "{green}{ADMIN_NAME}{default} brought {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} trajo a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} trajo a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a adus pe {green}{PLAYER_NAME}{default}"
     },
     "bury.usage": {
         "en": "Usage: %sbury <target>",
-        "es": "Uso: %sbury <objetivo>"
+        "es": "Uso: %sbury <objetivo>",
+        "ro": "Utilizare: %sbury <target>"
     },
     "bury.message": {
         "en": "{green}{ADMIN_NAME}{default} buried {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} enterró a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} enterró a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a ingropat pe {green}{PLAYER_NAME}{default}."
     },
     "bury.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} buried {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} enterró a {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} enterró a {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a ingropat {green}{PLAYER_COUNT}{default} jucatori."
     },
     "unbury.usage": {
         "en": "Usage: %sunbury <target>",
-        "es": "Uso: %sunbury <objetivo>"
+        "es": "Uso: %sunbury <objetivo>",
+        "ro": "Utilizare: %sunbury <target>"
     },
     "unbury.message": {
         "en": "{green}{ADMIN_NAME}{default} unburied {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} desenterró a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} desenterró a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a dezgropat pe {green}{PLAYER_NAME}{default}."
     },
     "unbury.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} unburied {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} desenterró a {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} desenterró a {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a dezgropat {green}{PLAYER_COUNT}{default} jucatori."
     },
     "noclip.usage": {
         "en": "Usage: %snoclip <target> [1|0]",
-        "es": "Uso: %snoclip <objetivo> [1|0]"
+        "es": "Uso: %snoclip <objetivo> [1|0]",
+        "ro": "Utilizare: %snoclip <target> [1|0]"
     },
     "noclip.enabled": {
         "en": "enabled",
-        "es": "activado"
+        "es": "activado",
+        "ro": "activat"
     },
     "noclip.disabled": {
         "en": "disabled",
-        "es": "desactivado"
+        "es": "desactivado",
+        "ro": "dezactivat"
     },
     "noclip.toggled": {
         "en": "toggled",
-        "es": "alternado"
+        "es": "alternado",
+        "ro": "comutat"
     },
     "noclip.message": {
-        "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} noclip for {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} noclip para {green}{PLAYER_NAME}{default}."
+    "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} noclip for {green}{PLAYER_NAME}{default}.",
+    "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} noclip para {green}{PLAYER_NAME}{default}.",
+    "ro": "{green}{ADMIN_NAME}{default} a {green}{STATUS}{default} noclip pentru {green}{PLAYER_NAME}{default}."
     },
     "noclip.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} noclip for {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} noclip para {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} noclip para {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a {green}{STATUS}{default} noclip pentru {green}{PLAYER_COUNT}{default} jucători."
     },
     "god.usage": {
         "en": "Usage: %sgod <target> <enable|disable|toggle>",
-        "es": "Uso: %sgod <objetivo> <activar|desactivar|alternar>"
+        "es": "Uso: %sgod <objetivo> <activar|desactivar|alternar>",
+        "ro": "Utilizare: %sgod <target> <activează|dezactivează|comută>"
     },
     "god.enabled": {
         "en": "enabled",
-        "es": "activado"
+        "es": "activado",
+        "ro": "activat"
     },
     "god.disabled": {
         "en": "disabled",
-        "es": "desactivado"
+        "es": "desactivado",
+        "ro": "dezactivat"
     },
     "god.toggled": {
         "en": "toggled",
-        "es": "alternado"
+        "es": "alternado",
+        "ro": "comutat"
     },
     "god.message": {
         "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} god mode for {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} el modo dios para {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} el modo dios para {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a {green}{STATUS}{default} godmode pentru {green}{PLAYER_NAME}{default}."
     },
     "god.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} god mode for {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} el modo dios para {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} el modo dios para {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a {green}{STATUS}{default} pentru {green}{PLAYER_COUNT}{default} jucători."
     },
     "freeze.usage": {
         "en": "Usage: %sfreeze <target>",
-        "es": "Uso: %sfreeze <objetivo>"
+        "es": "Uso: %sfreeze <objetivo>",
+        "ro": "Utilizare: %sfreeze <target>"
     },
     "freeze.message": {
         "en": "{green}{ADMIN_NAME}{default} froze {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} congeló a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} congeló a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l- a înghețat pe {green}{PLAYER_NAME}{default}."
     },
     "freeze.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} froze {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} congeló a {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} congeló a {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a înghețat {green}{PLAYER_COUNT}{default} jucători."
     },
     "unfreeze.usage": {
         "en": "Usage: %sunfreeze <target>",
-        "es": "Uso: %sunfreeze <objetivo>"
+        "es": "Uso: %sunfreeze <objetivo>",
+        "ro": "Utilizare: %sunfreeze <tinta>"
     },
     "unfreeze.message": {
         "en": "{green}{ADMIN_NAME}{default} unfroze {green}{PLAYER_NAME}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} descongeló a {green}{PLAYER_NAME}{default}."
+        "es": "{green}{ADMIN_NAME}{default} descongeló a {green}{PLAYER_NAME}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a dezghețat pe {green}{PLAYER_NAME}{default}."
     },
     "unfreeze.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} unfroze {green}{PLAYER_COUNT}{default} players.",
-        "es": "{green}{ADMIN_NAME}{default} descongeló a {green}{PLAYER_COUNT}{default} jugadores."
+        "es": "{green}{ADMIN_NAME}{default} descongeló a {green}{PLAYER_COUNT}{default} jugadores.",
+        "ro": "{green}{ADMIN_NAME}{default} a dezghețat {green}{PLAYER_COUNT}{default} jucători."
     },
     "cc.usage": {
         "en": "Usage: %scc <target>",
-        "es": "Uso: %scc <objetivo>"
+        "es": "Uso: %scc <objetivo>",
+        "ro": "Utilizare: %scc <target>"
     },
     "cc.message": {
         "en": "{green}{ADMIN_NAME}{default} cleared the chat.",
-        "es": "{green}{ADMIN_NAME}{default} limpió el chat."
+        "es": "{green}{ADMIN_NAME}{default} limpió el chat.",
+        "ro": "{green}{ADMIN_NAME}{default} a curățat chatul."
     },
     "team.usage": {
         "en": "Usage: %steam <target> <team>",
-        "es": "Uso: %steam <objetivo> <equipo>"
+        "es": "Uso: %steam <objetivo> <equipo>",
+        "ro": "Utilizare: %steam <target> <echipă>"
     },
     "team.invalid_team": {
         "en": "Invalid team",
-        "es": "Equipo inválido"
+        "es": "Equipo inválido",
+        "ro": "Echipă invalidă"
     },
     "team.message": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to the {green}{TEAM}{default} team.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en el equipo {green}{TEAM}{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en el equipo {green}{TEAM}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a setat pe {green}{PLAYER_NAME}{default} în echipa {green}{TEAM}{default}."
     },
     "team.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to the {green}{TEAM}{default} team.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en el equipo {green}{TEAM}{default}."
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en el equipo {green}{TEAM}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_COUNT}{default} jucători în echipa {green}{TEAM}{default}."
     },
     "swap.usage": {
         "en": "Usage: %sswap <target>",
-        "es": "Uso: %sswap <objetivo>"
+        "es": "Uso: %sswap <objetivo>",
+        "ro": "Utilizare: %sswap <target>"
     },
     "swap.message": {
         "en": "{green}{ADMIN_NAME}{default} swapped {green}{PLAYER_NAME}{default} to the opposite team.",
-        "es": "{green}{ADMIN_NAME}{default} cambió a {green}{PLAYER_NAME}{default} al equipo opuesto."
+        "es": "{green}{ADMIN_NAME}{default} cambió a {green}{PLAYER_NAME}{default} al equipo opuesto.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a mutat pe {green}{PLAYER_NAME}{default} la echipa opusa."
     },
     "swap.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} swapped {green}{PLAYER_COUNT}{default} players to the opposite team.",
-        "es": "{green}{ADMIN_NAME}{default} cambió a {green}{PLAYER_COUNT}{default} jugadores al equipo opuesto."
+        "es": "{green}{ADMIN_NAME}{default} cambió a {green}{PLAYER_COUNT}{default} jugadores al equipo opuesto.",
+        "ro": "{green}{ADMIN_NAME}{default} a mutat {green}{PLAYER_COUNT}{default} jucatori la echipa opusa."
     },
     "1up.usage": {
         "en": "Usage: %s1up <target>",
-        "es": "Uso: %s1up <objetivo>"
+        "es": "Uso: %s1up <objetivo>",
+        "ro": "Utilizare: %s1up <target>"
     },
     "1up.message": {
         "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_NAME}{default} in his death location.",
-        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_NAME}{default} en donde murió."
+        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_NAME}{default} en donde murió.",
+        "ro": "{green}{ADMIN_NAME}{default} l-a respawnat pe {green}{PLAYER_NAME}{default} unde a murit."
     },
     "1up.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_COUNT}{default} players in their death location.",
-        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_COUNT}{default} jugadores en donde murieron."
+        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_COUNT}{default} jugadores en donde murieron.",
+        "ro": "{green}{ADMIN_NAME}{default} a respawnat {green}{PLAYER_COUNT}{default} playeri unde au murit."
     }
 }
