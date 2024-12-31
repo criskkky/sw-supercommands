@@ -1,4 +1,4 @@
-  <h3 align="center">[Swiftly] Admin System - Super Commands</h3>
+  <h3 align="center">[Swiftly] Super Commands</h3>
 
   <p align="center">
     A plugin for Swiftly that implements some extra commands.
@@ -35,13 +35,31 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 
 | Command | Arguments | Description | Flags |
 | --- | --- | --- | --- |
-| `!hp` | `<target> <health> [armor] [helmet]` | Set player health, armor, helmet | `C` |
-| `!give` | `<target> <weapon>` | Give weapon to player | `C` |
-| `!giveitem` | `<target> <item>` | Give item to player | `C` |
-| `!givemoney` | `<target> <amount>` | Give money to player | `C` |
-| `!setmoney` | `<target> <amount>` | Set player money | `C` |
-| `!melee` | `<target>` | Give melee weapon to player | `C` |
-| `!disarm` | `<target>` | Remove all weapons from player | `C` |
+| `!1up` | `<target>` | Respawn and teleport to death location | `B` |
+| `!bring` | `<target>` | Teleport player to you | `B` |
+| `!bury` | `<target>` | Bury player | `B` |
+| `!cc` | `-` | Clear chat | `J` |
+| `!disarm` | `<target>` | Remove all weapons from player | `B` |
+| `!freeze` | `<target>` | Freeze player | `B` |
+| `!give` | `<target> <weapon>` | Give weapon to player | `N` |
+| `!giveitem` | `<target> <item>` | Give item to player | `N` |
+| `!givemoney` | `<target> <amount>` | Give money to player | `N` |
+| `!god` | `<target> [1/0]` | Toggle godmode for player | `N` |
+| `!goto` | `<target>` | Teleport to player | `B` |
+| `!hp` | `<target> <health> [armor] [helmet]` | Set player health, armor, helmet | `F` |
+| `!melee` | `<target>` | Give melee weapon to player | `B` |
+| `!noclip` | `<target> [1/0]` | Toggle noclip for player | `N` |
+| `!respawn` | `<target>` | Respawn player | `B` |
+| `!rg` | `<target>` | Restart game | `B` |
+| `!rr` | `<target>` | Restart round | `B` |
+| `!setmoney` | `<target> <amount>` | Set player money | `N` |
+| `!swap` | `<target>` | Swap player team | `B` |
+| `!takemoney` | `<target> <amount>` | Take money from player | `N` |
+| `!team` | `<target> <team>` | Set player team | `B` |
+| `!tp` | `<playerFrom> <playerTo>` | Teleport player to player | `B` |
+| `!unbury` | `<target>` | Unbury player | `B` |
+| `!unfreeze` | `<target>` | Unfreeze player | `B` |
+| `!xyz` | `[target]` | Get player coords in-game | `B` |
 
 ### Configuring the plugin 👨🏻‍💻
 - Doesn't need additional config ✅
@@ -49,7 +67,10 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 ### Todo List 🎯
 - Fix [issues](https://github.com/criskkky/swiftly_supercommands/issues) if there's any.
 
+### Wanna contribute? 🤝
+- Feel free to open a [pull request](https://github.com/criskkky/swiftly_supercommands/pulls) with your changes. Make sure to explain what you did and why you did it.
+
 ### Problems using this? 😔
 If you really need help with something that isn't explained here reach me:
-1. Opening an [issue](https://github.com/criskkky/swiftly_supercommands/issues).
+1. Opening an [issue](https://github.com/criskkky/swiftly_supercommands/issues) [RECOMMENDED].
 2. Directly through [Discord](<https://discord.com/users/404372759028957231>) or [Steam](<https://steamcommunity.com/profiles/76561197971142357>).

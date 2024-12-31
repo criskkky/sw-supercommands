@@ -1,4 +1,12 @@
 {
+    "console": {
+        "en": "Check your console :P",
+        "es": "Revisa tu consola :P"
+    },
+    "console.cant_use": {
+        "en": "You can't use this command in the server console.",
+        "es": "No puedes usar este comando en la consola del servidor."
+    },
     "hp.usage": {
         "en": "Usage: %shp <target> <health> [armor] [helmet]",
         "es": "Uso: %shp <objetivo> <vida> [armadura] [casco]"
@@ -40,8 +48,8 @@
         "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}[{red}{HEALTH}{default} HP{default} | {blue}{ARMOR}{default} ARMOR{default} | {yellow}{HELMET}{default} CASCO{green}]{default}."
     },
     "give.usage": {
-        "en": "Usage: %sgive <target> <item> [amount]",
-        "es": "Uso: %sgive <objetivo> <objeto> [cantidad]"
+        "en": "Usage: %sgive <target> <weapon>",
+        "es": "Uso: %sgive <objetivo> <arma>"
     },
     "give.invalid_weapon": {
         "en": "Invalid weapon",
@@ -80,12 +88,12 @@
         "es": "Cantidad inválida"
     },
     "givemoney.message": {
-        "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_NAME}{default} {green}${AMOUNT}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_NAME}{default} {green}${AMOUNT}{default}."
+        "en": "{green}{ADMIN_NAME}{default} gave {green}${AMOUNT}{default} to {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} le dio {green}${AMOUNT}{default} a {green}{PLAYER_NAME}{default}."
     },
     "givemoney.mult_message": {
-        "en": "{green}{ADMIN_NAME}{default} gave to {green}{PLAYER_COUNT}{default} players {green}${AMOUNT}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} le dio a {green}{PLAYER_COUNT}{default} jugadores {green}${AMOUNT}{default}."
+        "en": "{green}{ADMIN_NAME}{default} gave {green}${AMOUNT}{default} to {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} le dio {green}${AMOUNT}{default} a {green}{PLAYER_COUNT}{default} jugadores."
     },
     "setmoney.usage": {
         "en": "Usage: %ssetmoney <target> <amount>",
@@ -96,12 +104,28 @@
         "es": "Cantidad inválida"
     },
     "setmoney.message": {
-        "en": "{green}{ADMIN_NAME}{default} set to {green}{PLAYER_NAME}{default} {green}${AMOUNT}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {green}${AMOUNT}{default}."
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {yellow}${AMOUNT}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {yellow}${AMOUNT}{default}."
     },
     "setmoney.mult_message": {
-        "en": "{green}{ADMIN_NAME}{default} set to {green}{PLAYER_COUNT}{default} players {green}${AMOUNT}{default}.",
-        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {green}${AMOUNT}{default}."
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {yellow}${AMOUNT}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {yellow}${AMOUNT}{default}."
+    },
+    "takemoney.usage": {
+        "en": "Usage: %stakemoney <target> <amount>",
+        "es": "Uso: %stakemoney <objetivo> <cantidad>"
+    },
+    "takemoney.invalid_amount": {
+        "en": "Invalid amount",
+        "es": "Cantidad inválida"
+    },
+    "takemoney.message": {
+        "en": "{green}{ADMIN_NAME}{default} took {red}${AMOUNT}{default} from {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} le quitó {red}${AMOUNT}{default} a {green}{PLAYER_NAME}{default}."
+    },
+    "takemoney.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} took {red}${AMOUNT}{default} from {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} le quitó {red}${AMOUNT}{default} a {green}{PLAYER_COUNT}{default} jugadores."
     },
     "melee.usage": {
         "en": "Usage: %smelee <target>",
@@ -126,5 +150,189 @@
     "disarm.mult_message": {
         "en": "{green}{ADMIN_NAME}{default} disarmed {green}{PLAYER_COUNT}{default} players.",
         "es": "{green}{ADMIN_NAME}{default} desarmó a {green}{PLAYER_COUNT}{default} jugadores."
+    },
+    "respawn.usage": {
+        "en": "Usage: %srespawn <target>",
+        "es": "Uso: %srespawn <objetivo>"
+    },
+    "respawn.message": {
+        "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_NAME}{default}."
+    },
+    "respawn.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_COUNT}{default} jugadores."
+    },
+    "rr.usage": {
+        "en": "Usage: %srr [time]",
+        "es": "Uso: %srr [tiempo]"
+    },
+    "rr.message": {
+        "en": "{green}{ADMIN_NAME}{default} called a round restart in {red}{TIME}{default} seconds.",
+        "es": "{green}{ADMIN_NAME}{default} llamó a un reinicio de ronda en {red}{TIME}{default} segundos."
+    },
+    "rg.usage": {
+        "en": "Usage: %srg [time]",
+        "es": "Uso: %srg [tiempo]"
+    },
+    "rg.message": {
+        "en": "{green}{ADMIN_NAME}{default} called a game restart in {red}{TIME}{default} seconds.",
+        "es": "{green}{ADMIN_NAME}{default} llamó a un reinicio de partida en {red}{TIME}{default} segundos."
+    },
+    "tp.usage": {
+        "en": "Usage: %stp <player1> <player2>",
+        "es": "Uso: %stp <jugador1> <jugador2>"
+    },
+    "tp.message": {
+        "en": "{green}{ADMIN_NAME}{default} teleported {green}{PLAYER1}{default} to {green}{PLAYER2}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} teletransportó a {green}{PLAYER1}{default} a {green}{PLAYER2}{default}."
+    },
+    "goto.usage": {
+        "en": "Usage: %sgoto <target>",
+        "es": "Uso: %sgoto <objetivo>"
+    },
+    "goto.message": {
+        "en": "{green}{ADMIN_NAME}{default} teleported to {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} se teletransportó a {green}{PLAYER_NAME}{default}."
+    },
+    "bring.usage": {
+        "en": "Usage: %sbring <target>",
+        "es": "Uso: %sbring <objetivo>"
+    },
+    "bring.message": {
+        "en": "{green}{ADMIN_NAME}{default} brought {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} trajo a {green}{PLAYER_NAME}{default}."
+    },
+    "bury.usage": {
+        "en": "Usage: %sbury <target>",
+        "es": "Uso: %sbury <objetivo>"
+    },
+    "bury.message": {
+        "en": "{green}{ADMIN_NAME}{default} buried {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} enterró a {green}{PLAYER_NAME}{default}."
+    },
+    "bury.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} buried {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} enterró a {green}{PLAYER_COUNT}{default} jugadores."
+    },
+    "unbury.usage": {
+        "en": "Usage: %sunbury <target>",
+        "es": "Uso: %sunbury <objetivo>"
+    },
+    "unbury.message": {
+        "en": "{green}{ADMIN_NAME}{default} unburied {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} desenterró a {green}{PLAYER_NAME}{default}."
+    },
+    "unbury.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} unburied {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} desenterró a {green}{PLAYER_COUNT}{default} jugadores."
+    },
+    "noclip.usage": {
+        "en": "Usage: %snoclip <target> [1|0]",
+        "es": "Uso: %snoclip <objetivo> [1|0]"
+    },
+    "noclip.enabled": {
+        "en": "enabled",
+        "es": "activado"
+    },
+    "noclip.disabled": {
+        "en": "disabled",
+        "es": "desactivado"
+    },
+    "noclip.toggled": {
+        "en": "toggled",
+        "es": "alternado"
+    },
+    "noclip.message": {
+        "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} noclip for {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} noclip para {green}{PLAYER_NAME}{default}."
+    },
+    "noclip.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} noclip for {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} noclip para {green}{PLAYER_COUNT}{default} jugadores."
+    },
+    "god.usage": {
+        "en": "Usage: %sgod <target> <enable|disable|toggle>",
+        "es": "Uso: %sgod <objetivo> <activar|desactivar|alternar>"
+    },
+    "god.enabled": {
+        "en": "enabled",
+        "es": "activado"
+    },
+    "god.disabled": {
+        "en": "disabled",
+        "es": "desactivado"
+    },
+    "god.toggled": {
+        "en": "toggled",
+        "es": "alternado"
+    },
+    "god.message": {
+        "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} god mode for {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} el modo dios para {green}{PLAYER_NAME}{default}."
+    },
+    "god.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} has been {green}{STATUS}{default} god mode for {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} ha {green}{STATUS}{default} el modo dios para {green}{PLAYER_COUNT}{default} jugadores."
+    },
+    "freeze.usage": {
+        "en": "Usage: %sfreeze <target>",
+        "es": "Uso: %sfreeze <objetivo>"
+    },
+    "freeze.message": {
+        "en": "{green}{ADMIN_NAME}{default} froze {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} congeló a {green}{PLAYER_NAME}{default}."
+    },
+    "freeze.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} froze {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} congeló a {green}{PLAYER_COUNT}{default} jugadores."
+    },
+    "unfreeze.usage": {
+        "en": "Usage: %sunfreeze <target>",
+        "es": "Uso: %sunfreeze <objetivo>"
+    },
+    "unfreeze.message": {
+        "en": "{green}{ADMIN_NAME}{default} unfroze {green}{PLAYER_NAME}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} descongeló a {green}{PLAYER_NAME}{default}."
+    },
+    "unfreeze.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} unfroze {green}{PLAYER_COUNT}{default} players.",
+        "es": "{green}{ADMIN_NAME}{default} descongeló a {green}{PLAYER_COUNT}{default} jugadores."
+    },
+    "cc.usage": {
+        "en": "Usage: %scc <target>",
+        "es": "Uso: %scc <objetivo>"
+    },
+    "cc.message": {
+        "en": "{green}{ADMIN_NAME}{default} cleared the chat.",
+        "es": "{green}{ADMIN_NAME}{default} limpió el chat."
+    },
+    "team.usage": {
+        "en": "Usage: %steam <target> <team>",
+        "es": "Uso: %steam <objetivo> <equipo>"
+    },
+    "team.invalid_team": {
+        "en": "Invalid team",
+        "es": "Equipo inválido"
+    },
+    "team.message": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to the {green}{TEAM}{default} team.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en el equipo {green}{TEAM}{default}."
+    },
+    "team.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to the {green}{TEAM}{default} team.",
+        "es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en el equipo {green}{TEAM}{default}."
+    },
+    "swap.usage": {
+        "en": "Usage: %sswap <target>",
+        "es": "Uso: %sswap <objetivo>"
+    },
+    "swap.message": {
+        "en": "{green}{ADMIN_NAME}{default} swapped {green}{PLAYER_NAME}{default} to the opposite team.",
+        "es": "{green}{ADMIN_NAME}{default} cambió a {green}{PLAYER_NAME}{default} al equipo opuesto."
+    },
+    "swap.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} swapped {green}{PLAYER_COUNT}{default} players to the opposite team.",
+        "es": "{green}{ADMIN_NAME}{default} cambió a {green}{PLAYER_COUNT}{default} jugadores al equipo opuesto."
     }
 }
