@@ -1448,7 +1448,6 @@ end)
 -- !speed <target> <speed> (set speed)
 commands:Register("speed", function(playerid, args, argsCount, silent, prefix)
     local admin = nil
-    local speed = nil
 
     if playerid == -1 then
         admin = "CONSOLE"
@@ -1476,7 +1475,7 @@ commands:Register("speed", function(playerid, args, argsCount, silent, prefix)
         return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("admins.invalid_player"))
     end
 
-    speed = tonumber(args[2])
+    local speed = tonumber(args[2])
     if not speed then
         return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("supercommands.speed.invalid_speed"))
     end
@@ -1499,6 +1498,63 @@ commands:Register("speed", function(playerid, args, argsCount, silent, prefix)
             :gsub("{ADMIN_NAME}", admin)
             :gsub("{PLAYER_NAME}", pl:CBasePlayerController().PlayerName)
             :gsub("{SPEED}", tostring(speed))
+        ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
+    end
+end)
+
+-- !gravity <target> <value> (value must be between 0.0 and 1.0)
+commands:Register("gravity", function(playerid, args, argsCount, silent, prefix)
+    local admin = nil
+
+    if playerid == -1 then
+        admin = "CONSOLE"
+    else
+        local player = GetPlayer(playerid)
+        if not player then return end
+
+        local hasAccess = exports["admins"]:HasFlags(playerid, "n")
+
+        if not hasAccess then
+            return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
+        end
+
+        if player:IsValid() then
+            admin = player:CBasePlayerController().PlayerName
+        end
+    end
+
+    if argsCount ~= 2 then
+        return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("supercommands.gravity.usage"), prefix))
+    end
+
+    local players = FindPlayersByTarget(args[1], true)
+    if #players == 0 then
+        return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("admins.invalid_player"))
+    end
+
+    local gravity = tonumber(args[2])
+    if not gravity or gravity < 0.0 or gravity > 1.0 then
+        return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("supercommands.gravity.invalid_gravity"))
+    end
+
+    for i = 1, #players do
+        local pl = players[i]
+        SetGravity(pl, gravity)
+    end
+
+    local message = nil
+    if #players > 1 then
+        message = FetchTranslation("supercommands.gravity.mult_message")
+            :gsub("{ADMIN_NAME}", admin)
+            :gsub("{PLAYER_COUNT}", tostring(#players))
+            :gsub("{GRAVITY}", tostring(gravity))
+        ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
+    else
+        local pl = players[1]
+        message = FetchTranslation("supercommands.gravity.message")
+            :gsub("{ADMIN_NAME}", admin)
+            :gsub("{PLAYER_NAME}", pl:CBasePlayerController().PlayerName)
+            :gsub("{GRAVITY}", tostring(gravity))
         ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
     end
 end)

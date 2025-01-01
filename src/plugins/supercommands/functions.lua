@@ -145,3 +145,12 @@ function SetSpeed(player, speed)
     -- Set the velocity modifier (speed) for the player
     playerPawn.VelocityModifier = speed
 end
+
+function SetGravity(player, gravity)
+    -- Get the player pawn
+    local playerPawn = player:CCSPlayerPawn()
+    if not playerPawn:IsValid() then return end  -- Ensure the pawn is valid
+
+    -- Apply the gravity scale to the player using CBaseEntity
+    CBaseEntity(playerPawn:ToPtr()).GravityScale = (gravity or 1.0)
+end
