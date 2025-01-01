@@ -1,22 +1,22 @@
-  <h3 align="center">[Swiftly] Super Commands</h3>
-
-  <p align="center">
-    A plugin for Swiftly that implements some extra commands.
-    <br/>
-    <a href="https://github.com/criskkky/swiftly_supercommands/issues">Report Bug</a>
-    -
-    <a href="https://github.com/criskkky/swiftly_supercommands/issues">Request Feature</a>
-    -
-    <a href="https://github.com/criskkky/swiftly_supercommands/pulls">Contribute Code</a>
-  </p>
+<h3 align="center">[Swiftly] Super Commands</h3>
+<p align="center">
+	A plugin for Swiftly that implements some extra commands.
+	<br/>
+	<a href="https://github.com/criskkky/swiftly_supercommands/issues">Report Bug</a>
+	-
+	<a href="https://github.com/criskkky/swiftly_supercommands/issues">Request Feature</a>
+	-
+	<a href="https://github.com/criskkky/swiftly_supercommands/pulls">Contribute Code</a>
+	</p>
 </p>
-  <p align="center">
-  <img alt="Downloads" src="https://img.shields.io/github/downloads/criskkky/swiftly_supercommands/total?style=for-the-badge&color=cyan">
-  <img alt="Contributors" src="https://img.shields.io/github/contributors/criskkky/swiftly_supercommands?color=cyan&style=for-the-badge">
-  <img alt="Issues" src="https://img.shields.io/github/issues/criskkky/swiftly_supercommands?style=for-the-badge&color=cyan">
-<br>
-<sub>Made by <a href="https://github.com/criskkky" target="_blank">@criskkky</a> with ❤️</sub> 
-  </p>
+<p align="center">
+	<img alt="Downloads" src="https://img.shields.io/github/downloads/criskkky/swiftly_supercommands/total?style=for-the-badge&color=cyan"/>
+	<img alt="Contributors" src="https://img.shields.io/github/contributors/criskkky/swiftly_supercommands?color=cyan&style=for-the-badge"/>
+	<img alt="Issues" src="https://img.shields.io/github/issues/criskkky/swiftly_supercommands?style=for-the-badge&color=cyan"/>
+	<br>
+	<sub>Made by <a href="https://github.com/criskkky" target="_blank">@criskkky</a> with ❤️
+	</sub> 
+</p>
 
 ### How it works? 🤨
 This plugin add an extra layer of commands to your server, providing advanced management priorizing shortcuts and simplicity. It's a must-have for any server owner that wants to have a better control over their server.

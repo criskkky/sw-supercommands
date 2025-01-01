@@ -1,9 +1,9 @@
 {
-    "conventionalCommits.scopes": [
-        "workflow",
-        "README.md",
-        "plugin",
-        "translation",
-    ],
-    "conventionalCommits.gitmoji": false,
+	"conventionalCommits.scopes": [
+		"workflow",
+		"README.md",
+		"plugin",
+		"translation",
+	],
+	"conventionalCommits.gitmoji": false,
 }
