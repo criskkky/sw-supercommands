@@ -51,14 +51,16 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 | `!givemoney` | `<target> <amount>` | Give money to player | `N` |
 | `!god` | `<target> [1/0]` | Toggle godmode for player | `N` |
 | `!goto` | `<target>` | Teleport to player | `B` |
+| `!gravity` | `<target> <gravity>` | Set player gravity | `N` |
 | `!hp` | `<target> <health> [armor] [helmet]` | Set player health, armor, helmet | `F` |
-| `!melee` | `<target>` | Give melee weapon to player | `B` |
+| `!melee` | `<target>` | Remove all weapons from player except knife | `B` |
 | `!noclip` | `<target> [1/0]` | Toggle noclip for player | `N` |
 | `!respawn` | `<target>` | Respawn player | `B` |
 | `!rg` | `<target>` | Restart game | `B` |
 | `!rr` | `<target>` | Restart round | `B` |
 | `!setmoney` | `<target> <amount>` | Set player money | `N` |
 | `!swap` | `<target>` | Swap player team | `B` |
+| `!speed` | `<target> <speed>` | Set player speed | `N` |
 | `!takemoney` | `<target> <amount>` | Take money from player | `N` |
 | `!team` | `<target> <team>` | Set player team | `B` |
 | `!tp` | `<playerFrom> <playerTo>` | Teleport player to player | `B` |
