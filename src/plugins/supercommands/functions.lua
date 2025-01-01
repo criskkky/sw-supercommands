@@ -136,3 +136,12 @@ function StringToQAngle(str)
     local pitch, yaw, roll = str:match("QAngle%(([^,]+),([^,]+),([^%)]+)%)")
     return QAngle(tonumber(pitch), tonumber(yaw), tonumber(roll))
 end
+
+function SetSpeed(player, speed)
+    -- Get the player pawn
+    local playerPawn = player:CCSPlayerPawn()
+    if not playerPawn:IsValid() then return end  -- Ensure the pawn is valid
+
+    -- Set the velocity modifier (speed) for the player
+    playerPawn.VelocityModifier = speed
+end

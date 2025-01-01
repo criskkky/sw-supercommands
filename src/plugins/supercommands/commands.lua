@@ -1397,7 +1397,7 @@ commands:Register("1up", function(playerid, args, argsCount, silent, prefix)
             end
         end
     end
-    
+
     local message = nil
     if #players > 1 then
         message = FetchTranslation("supercommands.1up.mult_message")
@@ -1443,4 +1443,62 @@ commands:Register("xyz", function(playerid, args, argsCount, silent, prefix)
     player:SendMsg(MessageType.Chat, string.format("{green}===== %s's Coords: =====", targetPlayer:CBasePlayerController().PlayerName))
     player:SendMsg(MessageType.Chat, string.format("{red}[POS] X: {default}%.2f, {red}Y: {default}%.2f, {red}Z: {default}%.2f", pos.x, pos.y, pos.z))
     player:SendMsg(MessageType.Chat, string.format("{blue}[ROT] " .. "X: {default}%.2f, {blue}Y: {default}%.2f, {blue}Z: {default}%.2f", rot.x, rot.y, rot.z))
+end)
+
+-- !speed <target> <speed> (set speed)
+commands:Register("speed", function(playerid, args, argsCount, silent, prefix)
+    local admin = nil
+    local speed = nil
+
+    if playerid == -1 then
+        admin = "CONSOLE"
+    else
+        local player = GetPlayer(playerid)
+        if not player then return end
+
+        local hasAccess = exports["admins"]:HasFlags(playerid, "n")
+
+        if not hasAccess then
+            return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
+        end
+
+        if player:IsValid() then
+            admin = player:CBasePlayerController().PlayerName
+        end
+    end
+
+    if argsCount ~= 2 then
+        return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("supercommands.speed.usage"), prefix))
+    end
+
+    local players = FindPlayersByTarget(args[1], true)
+    if #players == 0 then
+        return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("admins.invalid_player"))
+    end
+
+    speed = tonumber(args[2])
+    if not speed then
+        return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("supercommands.speed.invalid_speed"))
+    end
+
+    for i = 1, #players do
+        local pl = players[i]
+        SetSpeed(pl, speed)
+    end
+
+    local message = nil
+    if #players > 1 then
+        message = FetchTranslation("supercommands.speed.mult_message")
+            :gsub("{ADMIN_NAME}", admin)
+            :gsub("{PLAYER_COUNT}", tostring(#players))
+            :gsub("{SPEED}", tostring(speed))
+        ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
+    else
+        local pl = players[1]
+        message = FetchTranslation("supercommands.speed.message")
+            :gsub("{ADMIN_NAME}", admin)
+            :gsub("{PLAYER_NAME}", pl:CBasePlayerController().PlayerName)
+            :gsub("{SPEED}", tostring(speed))
+        ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
+    end
 end)
