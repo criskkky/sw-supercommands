@@ -428,5 +428,45 @@
         "en": "{green}{ADMIN_NAME}{default} respawned {green}{PLAYER_COUNT}{default} players in their death location.",
         "es": "{green}{ADMIN_NAME}{default} resucitó a {green}{PLAYER_COUNT}{default} jugadores en donde murieron.",
         "ro": "{green}{ADMIN_NAME}{default} a respawnat {green}{PLAYER_COUNT}{default} playeri unde au murit."
+    },
+    "speed.usage": {
+        "en": "Usage: %sspeed <target> <speed>",
+        "es": "Uso: %sspeed <objetivo> <velocidad>",
+        "ro": "Utilizare: %sspeed <target> <viteza>"
+    },
+    "speed.invalid_speed": {
+        "en": "Invalid speed",
+        "es": "Velocidad inválida",
+        "ro": "Viteza invalida"
+    },
+    "speed.message": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default}'s speed to {green}{SPEED}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció la velocidad de {green}{PLAYER_NAME}{default} a {green}{SPEED}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat viteza lui {green}{PLAYER_NAME}{default} la {green}{SPEED}{default}."
+    },
+    "speed.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players speed to {green}{SPEED}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció la velocidad de {green}{PLAYER_COUNT}{default} jugadores a {green}{SPEED}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat viteza la {green}{PLAYER_COUNT}{default} jucatori la {green}{SPEED}{default}."
+    },
+    "gravity.usage": {
+        "en": "Usage: %sgravity <target> <gravity>",
+        "es": "Uso: %sgravity <objetivo> <gravedad>",
+        "ro": "Utilizare: %sgravity <target> <gravitate>"
+    },
+    "gravity.invalid_gravity": {
+        "en": "Invalid gravity, must be between 0.0 and 1.0",
+        "es": "Gravedad inválida, debe estar entre 0.0 y 1.0",
+        "ro": "Gravitate invalida, trebuie sa fie intre 0.0 si 1.0"
+    },
+    "gravity.message": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default}'s gravity to {green}{GRAVITY}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció la gravedad de {green}{PLAYER_NAME}{default} a {green}{GRAVITY}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat gravitatea lui {green}{PLAYER_NAME}{default} la {green}{GRAVITY}{default}."
+    },
+    "gravity.mult_message": {
+        "en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players gravity to {green}{GRAVITY}{default}.",
+        "es": "{green}{ADMIN_NAME}{default} estableció la gravedad de {green}{PLAYER_COUNT}{default} jugadores a {green}{GRAVITY}{default}.",
+        "ro": "{green}{ADMIN_NAME}{default} a setat gravitatea la {green}{PLAYER_COUNT}{default} jucatori la {green}{GRAVITY}{default}."
     }
 }
