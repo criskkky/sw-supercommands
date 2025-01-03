@@ -4,16 +4,13 @@ commands:Register("hp", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "f")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -122,16 +119,13 @@ commands:Register("give", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "n")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -152,6 +146,7 @@ commands:Register("give", function(playerid, args, argsCount, silent, prefix)
 
 	local weapon = args[2]
 
+	-- Easier input typing
 	if string.find(weapon, "weapon_") == nil then
 		weapon = "weapon_" .. weapon
 	end
@@ -165,7 +160,7 @@ commands:Register("give", function(playerid, args, argsCount, silent, prefix)
 		pl:GetWeaponManager():GiveWeapon(weapon)
 	end
 
-	-- Better for translation handling
+	-- Remove the "weapon_" prefix for better readability at the message
 	if string.find(weapon, "weapon_") then
 		weapon = weapon:gsub("weapon_", "")
 	end
@@ -194,16 +189,13 @@ commands:Register("giveitem", function(playerid, args, argsCount, silent, prefix
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "n")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -257,16 +249,13 @@ commands:Register("givemoney", function(playerid, args, argsCount, silent, prefi
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "n")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -319,16 +308,13 @@ commands:Register("setmoney", function(playerid, args, argsCount, silent, prefix
 	local admin = nil
 	
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "n")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -380,16 +366,13 @@ commands:Register("takemoney", function(playerid, args, argsCount, silent, prefi
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "n")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -442,16 +425,13 @@ commands:Register("melee", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -498,16 +478,13 @@ commands:Register("disarm", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -553,16 +530,13 @@ commands:Register("respawn", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -609,16 +583,13 @@ commands:Register("rr", function(playerid, args, argsCount, silent, prefix)
 	local time = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -652,16 +623,13 @@ commands:Register("rg", function(playerid, args, argsCount, silent, prefix)
 	local time = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -696,16 +664,13 @@ commands:Register("tp", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -753,7 +718,6 @@ commands:Register("goto", function(playerid, args, argsCount, silent, prefix)
 
 	local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-	-- Permission Check
 	if not hasAccess then
 		return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 	end
@@ -793,7 +757,6 @@ commands:Register("bring", function(playerid, args, argsCount, silent, prefix)
 
 	local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-	-- Permission Check
 	if not hasAccess then
 		return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 	end
@@ -830,7 +793,6 @@ commands:Register("bury", function(playerid, args, argsCount, silent, prefix)
 
 	local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-	-- Permission Check
 	if not hasAccess then
 		return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 	end
@@ -880,7 +842,6 @@ commands:Register("unbury", function(playerid, args, argsCount, silent, prefix)
 
 	local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-	-- Permission Check
 	if not hasAccess then
 		return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 	end
@@ -927,16 +888,13 @@ commands:Register("noclip", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "n")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -998,16 +956,13 @@ commands:Register("god", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "n")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -1073,16 +1028,13 @@ end)
 commands:Register("freeze", function (playerid, args, argsCount, silent, prefix)
 	local admin = nil
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -1126,16 +1078,13 @@ end)
 commands:Register("unfreeze", function (playerid, args, argsCount, silent, prefix)
 	local admin = nil
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "b")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -1180,16 +1129,13 @@ end)
 commands:Register("cc", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
 	if playerid == -1 then
-		-- Set admin name to CONSOLE if executed by the server console
 		admin = "CONSOLE"
 	else
-		-- Set admin name to the player name if executed by a player
 		local player = GetPlayer(playerid)
 		if not player then return end
 
 		local hasAccess = exports["admins"]:HasFlags(playerid, "j")
 
-		-- Permission Check
 		if not hasAccess then
 			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
 		end
@@ -1250,7 +1196,6 @@ commands:Register("team", function(playerid, args, argsCount, silent, prefix)
 		CT = 3
 	}
 
-	-- Verificar si el equipo es válido y convertirlo a su valor correspondiente
 	if not teamMap[team] then
 		return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("supercommands.team.invalid_team"))
 	end
