@@ -399,6 +399,21 @@
 		"es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en el equipo {green}{TEAM}{default}.",
 		"ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_COUNT}{default} jucători în echipa {green}{TEAM}{default}."
 	},
+	"team.t": {
+		"en": "Terrorist",
+		"es": "Terrorista",
+		"ro": "Terorist"
+	},
+	"team.ct": {
+		"en": "Counter-Terrorist",
+		"es": "Anti-Terrorista",
+		"ro": "Antiterorist"
+	},
+	"team.spec": {
+		"en": "Spectator",
+		"es": "Espectador",
+		"ro": "Spectator"
+	},
 	"swap.usage": {
 		"en": "Usage: %sswap <target>",
 		"es": "Uso: %sswap <objetivo>",
@@ -468,5 +483,10 @@
 		"en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players gravity to {green}{GRAVITY}{default}.",
 		"es": "{green}{ADMIN_NAME}{default} estableció la gravedad de {green}{PLAYER_COUNT}{default} jugadores a {green}{GRAVITY}{default}.",
 		"ro": "{green}{ADMIN_NAME}{default} a setat gravitatea la {green}{PLAYER_COUNT}{default} jucatori la {green}{GRAVITY}{default}."
+	},
+	"xyz.usage": {
+		"en": "Usage: %sxyz [target]",
+		"es": "Uso: %sxyz [objetivo]",
+		"ro": "Utilizare: %sxyz [target]"
 	}
 }
