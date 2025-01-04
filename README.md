@@ -2,17 +2,17 @@
 <p align="center">
 	A plugin for Swiftly that implements some extra commands.
 	<br/>
-	<a href="https://github.com/criskkky/swiftly_supercommands/issues">Report Bug</a>
+	<a href="https://github.com/criskkky/sw-supercommands/issues">Report Bug</a>
 	-
-	<a href="https://github.com/criskkky/swiftly_supercommands/issues">Request Feature</a>
+	<a href="https://github.com/criskkky/sw-supercommands/issues">Request Feature</a>
 	-
-	<a href="https://github.com/criskkky/swiftly_supercommands/pulls">Contribute Code</a>
+	<a href="https://github.com/criskkky/sw-supercommands/pulls">Contribute Code</a>
 	</p>
 </p>
 <p align="center">
-	<img alt="Downloads" src="https://img.shields.io/github/downloads/criskkky/swiftly_supercommands/total?style=for-the-badge&color=cyan"/>
-	<img alt="Contributors" src="https://img.shields.io/github/contributors/criskkky/swiftly_supercommands?color=cyan&style=for-the-badge"/>
-	<img alt="Issues" src="https://img.shields.io/github/issues/criskkky/swiftly_supercommands?style=for-the-badge&color=cyan"/>
+	<img alt="Downloads" src="https://img.shields.io/github/downloads/criskkky/sw-supercommands/total?style=for-the-badge&color=cyan"/>
+	<img alt="Contributors" src="https://img.shields.io/github/contributors/criskkky/sw-supercommands?color=cyan&style=for-the-badge"/>
+	<img alt="Issues" src="https://img.shields.io/github/issues/criskkky/sw-supercommands?style=for-the-badge&color=cyan"/>
 	<br>
 	<sub>Made by <a href="https://github.com/criskkky" target="_blank">@criskkky</a> with ❤️
 	</sub> 
@@ -32,7 +32,7 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 | Swiftly Admins | Admins management plugin | ANY | [**CLICK HERE**](https://github.com/swiftly-solution/admins) | Already included in Swiftly ✅ |
 
 ### Installation 📦
-1. Download [latest release](https://github.com/criskkky/swiftly_supercommands/releases/latest).
+1. Download [latest release](https://github.com/criskkky/sw-supercommands/releases/latest).
 2. Everything is drag & drop, so i think you can do it.
 3. Ready!
 
@@ -77,12 +77,12 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 - Doesn't need additional config ✅
 
 ### Todo List 🎯
-- Fix [issues](https://github.com/criskkky/swiftly_supercommands/issues) if there's any.
+- Fix [issues](https://github.com/criskkky/sw-supercommands/issues) if there's any.
 
 ### Wanna contribute? 🤝
-- Feel free to open a [pull request](https://github.com/criskkky/swiftly_supercommands/pulls) with your changes. Make sure to explain what you did and why you did it.
+- Feel free to open a [pull request](https://github.com/criskkky/sw-supercommands/pulls) with your changes. Make sure to explain what you did and why you did it.
 
 ### Problems using this? 😔
 If you really need help with something that isn't explained here reach me:
-1. Opening an [issue](https://github.com/criskkky/swiftly_supercommands/issues) [RECOMMENDED].
+1. Opening an [issue](https://github.com/criskkky/sw-supercommands/issues) [RECOMMENDED].
 2. Directly through [Discord](<https://discord.com/users/404372759028957231>) or [Steam](<https://steamcommunity.com/profiles/76561197971142357>).
