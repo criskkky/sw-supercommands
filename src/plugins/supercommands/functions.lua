@@ -1,4 +1,3 @@
----@diagnostic disable: missing-parameter
 -- No prints here, feedback must be handled by the caller.
 
 function SetMoney(player, amount)

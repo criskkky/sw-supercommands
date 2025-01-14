@@ -1,4 +1,3 @@
----@diagnostic disable: param-type-mismatch, redundant-parameter
 -- !hp <target> <health> [armor] [helmet]
 commands:Register("hp", function(playerid, args, argsCount, silent, prefix)
 	local admin = nil
