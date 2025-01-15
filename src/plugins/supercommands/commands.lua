@@ -1502,3 +1502,60 @@ commands:Register("gravity", function(playerid, args, argsCount, silent, prefix)
 		ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
 	end
 end)
+
+-- !armor <target> <armor> (set armor)
+commands:Register("armor", function(playerid, args, argsCount, silent, prefix)
+	local admin = nil
+
+	if playerid == -1 then
+		admin = "CONSOLE"
+	else
+		local player = GetPlayer(playerid)
+		if not player then return end
+
+		local hasAccess = exports["admins"]:HasFlags(playerid, "f")
+
+		if not hasAccess then
+			return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("admins.no_permission"), prefix))
+		end
+
+		if player:IsValid() then
+			admin = player:CBasePlayerController().PlayerName
+		end
+	end
+
+	if argsCount ~= 2 then
+		return ReplyToCommand(playerid, config:Fetch("admins.prefix"), string.format(FetchTranslation("supercommands.armor.usage"), prefix))
+	end
+
+	local players = FindPlayersByTarget(args[1], true)
+	if #players == 0 then
+		return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("admins.invalid_player"))
+	end
+
+	local armor = tonumber(args[2])
+	if not armor then
+		return ReplyToCommand(playerid, config:Fetch("admins.prefix"), FetchTranslation("supercommands.armor.invalid_armor"))
+	end
+
+	for i = 1, #players do
+		local pl = players[i]
+		pl:CBaseEntity().Armor = armor
+	end
+
+	local message = nil
+	if #players > 1 then
+		message = FetchTranslation("supercommands.armor.mult_message")
+			:gsub("{ADMIN_NAME}", admin)
+			:gsub("{PLAYER_COUNT}", tostring(#players))
+			:gsub("{ARMOR}", tostring(armor))
+		ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
+	else
+		local pl = players[1]
+		message = FetchTranslation("supercommands.armor.message")
+			:gsub("{ADMIN_NAME}", admin)
+			:gsub("{PLAYER_NAME}", pl:CBasePlayerController().PlayerName)
+			:gsub("{ARMOR}", tostring(armor))
+		ReplyToCommand(playerid, config:Fetch("admins.prefix"), message)
+	end
+end)

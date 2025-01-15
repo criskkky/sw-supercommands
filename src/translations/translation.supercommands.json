@@ -488,5 +488,20 @@
 		"en": "Usage: %sxyz [target]",
 		"es": "Uso: %sxyz [objetivo]",
 		"ro": "Utilizare: %sxyz [target]"
+	},
+	"armor.usage": {
+		"en": "Usage: %sarmor <target> <armor>",
+		"es": "Uso: %sarmor <objetivo> <armadura>",
+		"ro": "Utilizare: %sarmor <target> <armura>"
+	},
+	"armor.message": {
+		"en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_NAME}{default} to {blue}{ARMOR}{default} armor.",
+		"es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_NAME}{default} en {blue}{ARMOR}{default} de armadura.",
+		"ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_NAME}{default} la {blue}{ARMOR}{default} armura."
+	},
+	"armor.mult_message": {
+		"en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {blue}{ARMOR}{default} armor.",
+		"es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {blue}{ARMOR}{default} de armadura.",
+		"ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_COUNT}{default} la {blue}{ARMOR}{default} armura."
 	}
 }
