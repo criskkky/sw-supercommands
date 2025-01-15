@@ -1,3 +1,8 @@
+<a href="#">
+<p align="center">
+	<img src=".github/images/banner.jpeg" alt="Plugin Logo" width="700"/>
+</p>
+</a>
 <h3 align="center">[Swiftly] Super Commands</h3>
 <p align="center">
 	A plugin for Swiftly that implements some extra commands.
@@ -41,6 +46,7 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 | Command | Arguments | Description | Flags |
 | --- | --- | --- | --- |
 | `!1up` | `<target>` | Respawn and teleport to death location | `B` |
+| `!armor` | `<target> <armor>` | Set player armor | `F` | 
 | `!bring` | `<target>` | Teleport player to you | `B` |
 | `!bury` | `<target>` | Bury player | `B` |
 | `!cc` | `-` | Clear chat | `J` |
@@ -56,8 +62,8 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 | `!melee` | `<target>` | Remove all weapons from player except knife | `B` |
 | `!noclip` | `<target> [1/0]` | Toggle noclip for player | `N` |
 | `!respawn` | `<target>` | Respawn player | `B` |
-| `!rg` | `<target>` | Restart game | `B` |
-| `!rr` | `<target>` | Restart round | `B` |
+| `!rg` | `[time]` | Restart game | `B` |
+| `!rr` | `[time]` | Restart round | `B` |
 | `!setmoney` | `<target> <amount>` | Set player money | `N` |
 | `!swap` | `<target>` | Swap player team | `B` |
 | `!speed` | `<target> <speed>` | Set player speed | `N` |
