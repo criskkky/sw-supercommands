@@ -370,9 +370,9 @@
 		"ro": "{green}{ADMIN_NAME}{default} a dezghețat {green}{PLAYER_COUNT}{default} jucători."
 	},
 	"cc.usage": {
-		"en": "Usage: %scc <target>",
-		"es": "Uso: %scc <objetivo>",
-		"ro": "Utilizare: %scc <target>"
+		"en": "Usage: %scc",
+		"es": "Uso: %scc",
+		"ro": "Utilizare: %scc"
 	},
 	"cc.message": {
 		"en": "{green}{ADMIN_NAME}{default} cleared the chat.",
