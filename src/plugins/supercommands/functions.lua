@@ -1,155 +1,152 @@
 -- No prints here, feedback must be handled by the caller.
 
-function SetMoney(player, amount)
-	local controller = player:CCSPlayerController()
-	if not controller:IsValid() then return end
-	controller.InGameMoneyServices.Account = amount
-	StateUpdate(controller:ToPtr(), "CCSPlayerController", "m_pInGameMoneyServices")
+function SetMoney(p_Player, p_Amount)
+	local l_Controller = p_Player:CCSPlayerController()
+	if not l_Controller:IsValid() then return end
+	l_Controller.InGameMoneyServices.Account = p_Amount
+	StateUpdate(l_Controller:ToPtr(), "CCSPlayerController", "m_pInGameMoneyServices")
 end
 
-function GiveMoney(player, amount)
-	local controller = player:CCSPlayerController()
-	if not controller:IsValid() then return end
-	controller.InGameMoneyServices.Account = controller.InGameMoneyServices.Account + amount
-	StateUpdate(controller:ToPtr(), "CCSPlayerController", "m_pInGameMoneyServices")
+function GiveMoney(p_Player, p_Amount)
+	local l_Controller = p_Player:CCSPlayerController()
+	if not l_Controller:IsValid() then return end
+	l_Controller.InGameMoneyServices.Account = l_Controller.InGameMoneyServices.Account + p_Amount
+	StateUpdate(l_Controller:ToPtr(), "CCSPlayerController", "m_pInGameMoneyServices")
 end
 
-function TakeMoney(player, amount)
-	local controller = player:CCSPlayerController()
-	if not controller:IsValid() then return end
-	controller.InGameMoneyServices.Account = controller.InGameMoneyServices.Account - amount
-	StateUpdate(controller:ToPtr(), "CCSPlayerController", "m_pInGameMoneyServices")
+function TakeMoney(p_Player, p_Amount)
+	local l_Controller = p_Player:CCSPlayerController()
+	if not l_Controller:IsValid() then return end
+	l_Controller.InGameMoneyServices.Account = l_Controller.InGameMoneyServices.Account - p_Amount
+	StateUpdate(l_Controller:ToPtr(), "CCSPlayerController", "m_pInGameMoneyServices")
 end
 
-function RestartRound(time)
-	SetTimeout(time * 1000, function()
+function RestartRound(p_Time)
+	SetTimeout(p_Time * 1000, function()
 		server:Execute("sv_cheats 1; endround; sv_cheats 0"); -- Lazy solution but works
 	end)
 end
 
-function RestartGame(time)
-	server:Execute("mp_restartgame " .. time)
+function RestartGame(p_Time)
+	server:Execute("mp_restartgame " .. p_Time)
 end
 
-function FindPlayer(target, detectBots) -- Find a player by steamid, steamid64, name or userid.
-	target = tostring(target):trim():lower()
+function FindPlayer(p_Target, p_DetectBots) -- Find a player by steamid, steamid64, name or userid.
+	-- String Lower: to make the search case insensitive.
+	p_Target = tostring(p_Target):trim():lower()
 
-	local matchedPlayer = nil
+	local l_MatchedPlayer = nil
 
 	for i = 0, playermanager:GetPlayerCap() - 1 do
-		local fetchedPlayer = GetPlayer(i)
-		if not fetchedPlayer then
+		local l_FetchedPlayer = GetPlayer(i)
+		if not l_FetchedPlayer then
 			goto continue
 		end
 
-		if detectBots == false and fetchedPlayer:IsFakeClient() then
+		if p_DetectBots == false and l_FetchedPlayer:IsFakeClient() then
 			goto continue
 		end
 
-		if tostring(fetchedPlayer:GetSteamID()) == target or fetchedPlayer:GetSteamID2() == target then
-			if matchedPlayer then
+		if tostring(l_FetchedPlayer:GetSteamID()) == p_Target or l_FetchedPlayer:GetSteamID2() == p_Target then
+			if l_MatchedPlayer then
 				return nil
 			end
-			matchedPlayer = fetchedPlayer
+			l_MatchedPlayer = l_FetchedPlayer
 		end
 
-		local cbasePlayerController = fetchedPlayer:CBasePlayerController()
-		if cbasePlayerController and cbasePlayerController:IsValid() then
-			if cbasePlayerController.PlayerName:lower():find(target) then
-				if matchedPlayer then
+		local l_CBasePlayerController = l_FetchedPlayer:CBasePlayerController()
+		if l_CBasePlayerController and l_CBasePlayerController:IsValid() then
+			if l_CBasePlayerController.PlayerName:lower():find(p_Target) then
+				if l_MatchedPlayer then
 					return nil
 				end
-				matchedPlayer = fetchedPlayer
+				l_MatchedPlayer = l_FetchedPlayer
 			end
 		end
 
-		if target:sub(1, 1) == "#" then
-			local playerid = target:sub(2)
-			if playerid and tonumber(playerid) == i then
-				if matchedPlayer then
+		if p_Target:sub(1, 1) == "#" then
+			local l_PlayerID = p_Target:sub(2)
+			if l_PlayerID and tonumber(l_PlayerID) == i then
+				if l_MatchedPlayer then
 					return nil
 				end
-				matchedPlayer = fetchedPlayer
+				l_MatchedPlayer = l_FetchedPlayer
 			end
 		end
 
 		::continue::
 	end
 
-	return matchedPlayer
+	return l_MatchedPlayer
 end
 
-function ToggleNoclip(player)
-	local playerCBaseEntity = CBaseEntity(player:CCSPlayerPawn():ToPtr())
-	if not playerCBaseEntity:IsValid() then return end
+function ToggleNoclip(p_Player)
+	local l_PlayerCBaseEntity = CBaseEntity(p_Player:CCSPlayerPawn():ToPtr())
+	if not l_PlayerCBaseEntity:IsValid() then return end
 
-	local currentMoveType = playerCBaseEntity.ActualMoveType -- Read the ActualMoveType value
+	local l_CurrentMoveType = l_PlayerCBaseEntity.ActualMoveType -- Read the ActualMoveType value
 
-	if currentMoveType ~= 2 then
-		playerCBaseEntity.ActualMoveType = 2 -- Walking mode (2)
-		StateUpdate(playerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
+	if l_CurrentMoveType ~= 2 then
+		l_PlayerCBaseEntity.ActualMoveType = 2 -- Walking mode (2)
+		StateUpdate(l_PlayerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
 	else
-		playerCBaseEntity.ActualMoveType = 7 -- Noclip mode (7)
-		StateUpdate(playerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
+		l_PlayerCBaseEntity.ActualMoveType = 7 -- Noclip mode (7)
+		StateUpdate(l_PlayerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
 	end
 end
 
-function DisableNoclip(player)
-	local playerCBaseEntity = CBaseEntity(player:CCSPlayerPawn():ToPtr())
-	if not playerCBaseEntity:IsValid() then return end
+function DisableNoclip(p_Player)
+	local l_PlayerCBaseEntity = CBaseEntity(p_Player:CCSPlayerPawn():ToPtr())
+	if not l_PlayerCBaseEntity:IsValid() then return end
 
-	playerCBaseEntity.ActualMoveType = 2 -- Walking mode (2)
-	StateUpdate(playerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
+	l_PlayerCBaseEntity.ActualMoveType = 2 -- Walking mode (2)
+	StateUpdate(l_PlayerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
 end
 
-function EnableNoclip(player)
-	local playerCBaseEntity = CBaseEntity(player:CCSPlayerPawn():ToPtr())
-	if not playerCBaseEntity:IsValid() then return end
+function EnableNoclip(p_Player)
+	local l_PlayerCBaseEntity = CBaseEntity(p_Player:CCSPlayerPawn():ToPtr())
+	if not l_PlayerCBaseEntity:IsValid() then return end
 
-	playerCBaseEntity.ActualMoveType = 7 -- Noclip mode (7)
-	StateUpdate(playerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
+	l_PlayerCBaseEntity.ActualMoveType = 7 -- Noclip mode (7)
+	StateUpdate(l_PlayerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
 end
 
-function FreezePlayer(player)
-	local playerCBaseEntity = CBaseEntity(player:CCSPlayerPawn():ToPtr())
-	if not playerCBaseEntity:IsValid() then return end
+function FreezePlayer(p_Player)
+	local l_PlayerCBaseEntity = CBaseEntity(p_Player:CCSPlayerPawn():ToPtr())
+	if not l_PlayerCBaseEntity:IsValid() then return end
 
-	playerCBaseEntity.ActualMoveType = 11 -- Invalid mode (11)
-	StateUpdate(playerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
+	l_PlayerCBaseEntity.ActualMoveType = 11 -- Invalid mode (11)
+	StateUpdate(l_PlayerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
 end
 
-function UnfreezePlayer(player)
-	local playerCBaseEntity = CBaseEntity(player:CCSPlayerPawn():ToPtr())
-	if not playerCBaseEntity:IsValid() then return end
+function UnfreezePlayer(p_Player)
+	local l_PlayerCBaseEntity = CBaseEntity(p_Player:CCSPlayerPawn():ToPtr())
+	if not l_PlayerCBaseEntity:IsValid() then return end
 
-	playerCBaseEntity.ActualMoveType = 2 -- Walking mode (2)
-	StateUpdate(playerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
+	l_PlayerCBaseEntity.ActualMoveType = 2 -- Walking mode (2)
+	StateUpdate(l_PlayerCBaseEntity:ToPtr(), "CBaseEntity", "m_MoveType")
 end
 
-function StringToVector(str)
-	local x, y, z = str:match("Vector%(([^,]+),([^,]+),([^%)]+)%)")
+function StringToVector(p_String)
+	local x, y, z = p_String:match("Vector%(([^,]+),([^,]+),([^%)]+)%)")
 	return Vector(tonumber(x), tonumber(y), tonumber(z))
 end
 
-function StringToQAngle(str)
-	local pitch, yaw, roll = str:match("QAngle%(([^,]+),([^,]+),([^%)]+)%)")
+function StringToQAngle(p_String)
+	local pitch, yaw, roll = p_String:match("QAngle%(([^,]+),([^,]+),([^%)]+)%)")
 	return QAngle(tonumber(pitch), tonumber(yaw), tonumber(roll))
 end
 
-function SetSpeed(player, speed)
-	-- Get the player pawn
-	local playerPawn = player:CCSPlayerPawn()
-	if not playerPawn:IsValid() then return end  -- Ensure the pawn is valid
+function SetSpeed(p_Player, p_Speed)
+	local l_PlayerPawn = p_Player:CCSPlayerPawn()
+	if not l_PlayerPawn:IsValid() then return end
 
-	-- Set the velocity modifier (speed) for the player
-	playerPawn.VelocityModifier = speed
+	l_PlayerPawn.VelocityModifier = p_Speed
 end
 
-function SetGravity(player, gravity)
-	-- Get the player pawn
-	local playerPawn = player:CCSPlayerPawn()
-	if not playerPawn:IsValid() then return end  -- Ensure the pawn is valid
+function SetGravity(p_Player, p_Gravity)
+	local l_PlayerPawn = p_Player:CCSPlayerPawn()
+	if not l_PlayerPawn:IsValid() then return end
 
-	-- Apply the gravity scale to the player using CBaseEntity
-	CBaseEntity(playerPawn:ToPtr()).GravityScale = (gravity or 1.0)
+	CBaseEntity(l_PlayerPawn:ToPtr()).GravityScale = (p_Gravity or 1.0)
 end
