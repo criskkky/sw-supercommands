@@ -150,3 +150,23 @@ function SetGravity(p_Player, p_Gravity)
 
 	CBaseEntity(l_PlayerPawn:ToPtr()).GravityScale = (p_Gravity or 1.0)
 end
+
+function BroadcastCommand(p_Prefix, p_String, p_AdminOnly, p_Silent)
+	if p_Silent then goto skip end
+	if p_AdminOnly ~= nil and type(p_AdminOnly) ~= "boolean" then
+		error("Check your configs/plugins/supercommands.json. 'print_only_admins' must be a boolean value.")
+	end
+
+	if p_AdminOnly then
+		for i = 0, playermanager:GetPlayerCap() - 1 do
+			local l_Player = GetPlayer(i)
+			if l_Player and exports["admins"]:HasFlags(i, "b") then -- b = ADMFLAG_GENERIC
+				l_Player:SendMsg(MessageType.Chat, p_Prefix .. " " .. p_String)
+			end
+		end
+	else
+		playermanager:SendMsg(MessageType.Chat, p_Prefix .. " " .. p_String)
+	end
+	:: skip ::
+	print(p_Prefix .. " " .. p_String) -- KEEP FOR CONSOLE LOGS
+end

@@ -95,7 +95,7 @@ commands:Register("hp", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_Pr
 				:gsub("{ARMOR}", tostring(l_Armor))
 				:gsub("{HELMET}", tostring(l_Helmet))
 		end
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -118,7 +118,7 @@ commands:Register("hp", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_Pr
 				:gsub("{ARMOR}", tostring(l_Armor))
 				:gsub("{HELMET}", tostring(l_Helmet))
 		end
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -164,7 +164,7 @@ commands:Register("give", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{WEAPON}", l_Weapon)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -172,7 +172,7 @@ commands:Register("give", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{WEAPON}", l_Weapon)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -208,7 +208,7 @@ commands:Register("giveitem", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{ITEM}", l_Item)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -216,7 +216,7 @@ commands:Register("giveitem", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{ITEM}", l_Item)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -251,7 +251,7 @@ commands:Register("givemoney", function(p_PlayerID, p_Args, p_ArgsCount, p_Silen
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{AMOUNT}", tostring(l_Amount))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -259,7 +259,7 @@ commands:Register("givemoney", function(p_PlayerID, p_Args, p_ArgsCount, p_Silen
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{AMOUNT}", tostring(l_Amount))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -294,7 +294,7 @@ commands:Register("setmoney", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{AMOUNT}", tostring(l_Amount))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -302,7 +302,7 @@ commands:Register("setmoney", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{AMOUNT}", tostring(l_Amount))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -337,7 +337,7 @@ commands:Register("takemoney", function(p_PlayerID, p_Args, p_ArgsCount, p_Silen
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{AMOUNT}", tostring(l_Amount))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -345,7 +345,7 @@ commands:Register("takemoney", function(p_PlayerID, p_Args, p_ArgsCount, p_Silen
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{AMOUNT}", tostring(l_Amount))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -375,14 +375,14 @@ commands:Register("melee", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p
 		l_Message = FetchTranslation("supercommands.melee.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.melee.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -411,14 +411,14 @@ commands:Register("disarm", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, 
 		l_Message = FetchTranslation("supercommands.disarm.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.disarm.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -447,14 +447,14 @@ commands:Register("respawn", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent,
 		l_Message = FetchTranslation("supercommands.respawn.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.respawn.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -477,7 +477,7 @@ commands:Register("rr", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_Pr
 		:gsub("{ADMIN_NAME}", l_Admin)
 		:gsub("{TIME}", tostring(l_Time))
 
-	ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+	BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 end)
 
 -- !rg <time> (restart game)
@@ -501,7 +501,7 @@ commands:Register("rg", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_Pr
 		:gsub("{ADMIN_NAME}", l_Admin)
 		:gsub("{TIME}", tostring(l_Time))
 
-	ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+	BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 end)
 
 -- !tp <player1> <player2>
@@ -533,7 +533,7 @@ commands:Register("tp", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_Pr
 		:gsub("{PLAYER1}", l_Player1:CBasePlayerController().PlayerName)
 		:gsub("{PLAYER2}", l_Player2:CBasePlayerController().PlayerName)
 
-	ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+	BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 end)
 
 -- !goto <target> (teleport)
@@ -561,7 +561,7 @@ commands:Register("goto", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_
 		:gsub("{ADMIN_NAME}", l_Admin)
 		:gsub("{PLAYER_NAME}", l_TargetPlayer:CBasePlayerController().PlayerName)
 
-	ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+	BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 end)
 
 -- !bring <target> (teleport)
@@ -589,7 +589,7 @@ commands:Register("bring", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p
 		:gsub("{ADMIN_NAME}", l_Admin)
 		:gsub("{PLAYER_NAME}", l_TargetPlayer:CBasePlayerController().PlayerName)
 
-	ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+	BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 end)
 
 -- !bury <target> (teleport to the ground)
@@ -619,14 +619,14 @@ commands:Register("bury", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_
 		l_Message = FetchTranslation("supercommands.bury.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.bury.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -657,14 +657,14 @@ commands:Register("unbury", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, 
 		l_Message = FetchTranslation("supercommands.unbury.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.unbury.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -710,7 +710,7 @@ commands:Register("noclip", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, 
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{STATUS}", l_Enable == 1 and FetchTranslation("supercommands.noclip.enabled") or l_Enable == 0 and FetchTranslation("supercommands.noclip.disabled") or FetchTranslation("supercommands.noclip.toggled"))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -718,7 +718,7 @@ commands:Register("noclip", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, 
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{STATUS}", l_Enable == 1 and FetchTranslation("supercommands.noclip.enabled") or l_Enable == 0 and FetchTranslation("supercommands.noclip.disabled") or FetchTranslation("supercommands.noclip.toggled"))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -769,7 +769,7 @@ commands:Register("god", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_P
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{STATUS}", l_Enable == 1 and FetchTranslation("supercommands.god.enabled") or l_Enable == 0 and FetchTranslation("supercommands.god.disabled") or FetchTranslation("supercommands.god.toggled"))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -777,7 +777,7 @@ commands:Register("god", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_P
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{STATUS}", l_Enable == 1 and FetchTranslation("supercommands.god.enabled") or l_Enable == 0 and FetchTranslation("supercommands.god.disabled") or FetchTranslation("supercommands.god.toggled"))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -806,14 +806,14 @@ commands:Register("freeze", function (p_PlayerID, p_Args, p_ArgsCount, p_Silent,
 		l_Message = FetchTranslation("supercommands.freeze.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.freeze.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -841,14 +841,14 @@ commands:Register("unfreeze", function (p_PlayerID, p_Args, p_ArgsCount, p_Silen
 		l_Message = FetchTranslation("supercommands.unfreeze.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.unfreeze.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -867,7 +867,7 @@ commands:Register("cc", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_Pr
 
 	local l_Message = FetchTranslation("supercommands.cc.message")
 		:gsub("{ADMIN_NAME}", l_Admin)
-	ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+	BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 end)
 
 -- !team <target> <team> (change team)
@@ -916,7 +916,7 @@ commands:Register("team", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{TEAM}", l_Team == 1 and FetchTranslation("supercommands.team.spec") or l_Team == 2 and FetchTranslation("supercommands.team.t") or FetchTranslation("supercommands.team.ct"))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -924,7 +924,7 @@ commands:Register("team", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{TEAM}", l_Team == 1 and FetchTranslation("supercommands.team.spec") or l_Team == 2 and FetchTranslation("supercommands.team.t") or FetchTranslation("supercommands.team.ct"))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -960,14 +960,14 @@ commands:Register("swap", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_
 		l_Message = FetchTranslation("supercommands.swap.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.swap.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -1013,14 +1013,14 @@ commands:Register("1up", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_P
 		l_Message = FetchTranslation("supercommands.1up.mult_message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
 		l_Message = FetchTranslation("supercommands.1up.message")
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -1090,7 +1090,7 @@ commands:Register("speed", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{SPEED}", tostring(l_Speed))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -1098,7 +1098,7 @@ commands:Register("speed", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{SPEED}", tostring(l_Speed))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -1132,7 +1132,7 @@ commands:Register("gravity", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent,
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{GRAVITY}", tostring(l_Gravity))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -1140,7 +1140,7 @@ commands:Register("gravity", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent,
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{GRAVITY}", tostring(l_Gravity))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
 
@@ -1174,7 +1174,7 @@ commands:Register("armor", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_COUNT}", tostring(#l_Players))
 			:gsub("{ARMOR}", tostring(l_Armor))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	else
 		-- Message handling for single player
 		local l_Pl = l_Players[1]
@@ -1182,6 +1182,6 @@ commands:Register("armor", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p
 			:gsub("{ADMIN_NAME}", l_Admin)
 			:gsub("{PLAYER_NAME}", l_Pl:CBasePlayerController().PlayerName)
 			:gsub("{ARMOR}", tostring(l_Armor))
-		ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), l_Message)
+		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
 end)
