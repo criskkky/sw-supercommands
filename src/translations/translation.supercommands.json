@@ -503,5 +503,10 @@
 		"en": "{green}{ADMIN_NAME}{default} set {green}{PLAYER_COUNT}{default} players to {blue}{ARMOR}{default} armor.",
 		"es": "{green}{ADMIN_NAME}{default} estableció a {green}{PLAYER_COUNT}{default} jugadores en {blue}{ARMOR}{default} de armadura.",
 		"ro": "{green}{ADMIN_NAME}{default} a setat {green}{PLAYER_COUNT}{default} la {blue}{ARMOR}{default} armura."
+	},
+	"who.usage": {
+		"en": "Usage: %swho",
+		"es": "Uso: %swho",
+		"ro": "Utilizare: %swho"
 	}
 }

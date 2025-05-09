@@ -170,3 +170,40 @@ function BroadcastCommand(p_Prefix, p_String, p_AdminOnly, p_Silent)
 	:: skip ::
 	print(p_Prefix .. " " .. p_String) -- KEEP FOR CONSOLE LOGS
 end
+
+function GetFlagsAsLetters(player)
+    local flags = player:GetVar("admin.flags") or 0
+    local letters = ""
+    local bitToLetterMap = {
+        [0] = "a", -- ADMFLAG_RESERVATION
+        [1] = "b", -- ADMFLAG_GENERIC
+        [2] = "c", -- ADMFLAG_KICK
+        [3] = "d", -- ADMFLAG_BAN
+        [4] = "e", -- ADMFLAG_UNBAN
+        [5] = "f", -- ADMFLAG_SLAY
+        [6] = "g", -- ADMFLAG_CHANGEMAP
+        [7] = "h", -- ADMFLAG_CONVARS
+        [8] = "i", -- ADMFLAG_CONFIG
+        [9] = "j", -- ADMFLAG_CHAT
+        [10] = "k", -- ADMFLAG_VOTE
+        [11] = "l", -- ADMFLAG_PASSWORD
+        [12] = "m", -- ADMFLAG_RCON
+        [13] = "n", -- ADMFLAG_CHEATS
+        [14] = "z", -- ADMFLAG_ROOT
+        [15] = "o", -- ADMFLAG_CUSTOM1
+        [16] = "p", -- ADMFLAG_CUSTOM2
+        [17] = "q", -- ADMFLAG_CUSTOM3
+        [18] = "r", -- ADMFLAG_CUSTOM4
+        [19] = "s", -- ADMFLAG_CUSTOM5
+        [20] = "t"  -- ADMFLAG_CUSTOM6
+    }
+
+    -- Iterar sobre los bits del valor "flags"
+    for bit = 0, 20 do
+        if (flags & (1 << bit)) ~= 0 then
+            letters = letters .. (bitToLetterMap[bit] or "?") -- Agregar la letra correspondiente
+        end
+    end
+
+    return letters
+end

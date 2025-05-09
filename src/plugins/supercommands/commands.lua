@@ -896,7 +896,7 @@ commands:Register("team", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_
 	if not l_Team then
 		return ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), FetchTranslation("supercommands.team.invalid_team"))
 	end
-	
+
 	for i = 1, #l_Players do
 		local l_Pl = l_Players[i]
 		if not l_Pl:CBaseEntity():IsValid() then return end
@@ -1157,7 +1157,7 @@ commands:Register("armor", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p
 	if #l_Players == 0 then
 		return ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), FetchTranslation("admins.invalid_player"))
 	end
-	
+
 	local l_Armor = tonumber(p_Args[2])
 	if not l_Armor then
 		return ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), FetchTranslation("supercommands.armor.invalid_armor"))
@@ -1184,4 +1184,60 @@ commands:Register("armor", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p
 			:gsub("{ARMOR}", tostring(l_Armor))
 		BroadcastCommand(config:Fetch("admins.prefix"), l_Message, config:Fetch("supercommands.print_only_admins"), p_Silent)
 	end
+end)
+
+-- !who [target] (see own or other player info)
+commands:Register("who", function(p_PlayerID, p_Args, p_ArgsCount, p_Silent, p_Prefix)
+	local l_Admin = g_PermissionsCheck(p_PlayerID, "m", p_Prefix)
+	if not l_Admin then return end
+
+	local l_TargetPlayer = nil
+	if p_ArgsCount == 0 then
+		l_TargetPlayer = GetPlayer(p_PlayerID)
+	elseif p_ArgsCount == 1 then
+		l_TargetPlayer = FindPlayer(p_Args[1], true)
+	else
+		return ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), string.format(FetchTranslation("supercommands.who.usage"), p_Prefix))
+	end
+
+	if not l_TargetPlayer or not l_TargetPlayer:IsValid() then
+		return ReplyToCommand(p_PlayerID, config:Fetch("admins.prefix"), FetchTranslation("admins.invalid_player"))
+	end
+
+	-- General Info
+	local l_PlayerName = l_TargetPlayer:CBasePlayerController().PlayerName or "none"
+	local l_PlayerFlags = GetFlagsAsLetters(l_TargetPlayer)
+	local l_PlayerInmunity = l_TargetPlayer:GetVar("admin.immunity") or "none"
+	local l_PlayerGroup = l_TargetPlayer:GetVar("admin.group") or "none"
+	-- Sensitive Info
+	local l_PlayerSteamID = l_TargetPlayer:GetSteamID() or "none"
+	local l_PlayerSteamID2 = l_TargetPlayer:GetSteamID2() or "none"
+	local l_PlayerIP = l_TargetPlayer:GetIPAddress() or "none"
+	local l_PlayerCountry = (l_PlayerIP ~= "none" and ip:GetCountry(l_PlayerIP) or "none")
+
+		if p_PlayerID ~= -1 then
+			local l_Player = GetPlayer(p_PlayerID)
+			if not l_Player then return end
+			l_Player:SendMsg(MessageType.Console, string.format("{red}============= {default}WHO COMMAND {red}=============\n"))
+			l_Player:SendMsg(MessageType.Console, string.format("{green} Player Name: {default}%s\n", l_PlayerName))
+			l_Player:SendMsg(MessageType.Console, string.format("{green} Player Flags: {default}%s\n", l_PlayerFlags))
+			l_Player:SendMsg(MessageType.Console, string.format("{green} Player Group: {default}%s\n", l_PlayerGroup))
+			l_Player:SendMsg(MessageType.Console, string.format("{green} Player Inmunity: {default}%s\n", l_PlayerInmunity))
+			l_Player:SendMsg(MessageType.Console, string.format("{green} Player SteamID: {default}%s\n", l_PlayerSteamID2))
+			l_Player:SendMsg(MessageType.Console, string.format("{green} Player SteamID64: {default}%s\n", l_PlayerSteamID))
+			l_Player:SendMsg(MessageType.Console, string.format("{green} Player IP: {default}%s\n", l_PlayerIP))
+			l_Player:SendMsg(MessageType.Console, string.format("{green} Player Country: {default}%s\n", l_PlayerCountry))
+			l_Player:SendMsg(MessageType.Console, string.format("{red}========================================"))
+		else
+			print(string.format("{red}============= {default}WHO COMMAND {red}============="))
+			print(string.format("{green} Player Name: {default}%s", l_PlayerName))
+			print(string.format("{green} Player Flags: {default}%s", l_PlayerFlags))
+			print(string.format("{green} Player Group: {default}%s", l_PlayerGroup))
+			print(string.format("{green} Player Inmunity: {default}%s", l_PlayerInmunity))
+			print(string.format("{green} Player SteamID: {default}%s", l_PlayerSteamID2))
+			print(string.format("{green} Player SteamID64: {default}%s", l_PlayerSteamID))
+			print(string.format("{green} Player IP: {default}%s", l_PlayerIP))
+			print(string.format("{green} Player Country: {default}%s", l_PlayerCountry))
+			print(string.format("{red}========================================"))
+		end
 end)
