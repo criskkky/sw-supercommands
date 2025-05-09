@@ -1,6 +1,6 @@
 <a href="#">
 <p align="center">
-	<img src=".github/images/banner.jpeg" alt="Plugin Logo" width="700"/>
+	<img src="https://raw.githubusercontent.com/criskkky/sw-supercommands/59d517d809168936fde94e3d1b20cdaaba81efd3/.github/images/banner.jpeg" alt="Plugin Logo" width="700"/>
 </p>
 </a>
 <h3 align="center">[Swiftly] Super Commands</h3>
@@ -72,6 +72,7 @@ This plugin add an extra layer of commands to your server, providing advanced ma
 | `!tp` | `<playerFrom> <playerTo>` | Teleport player to player | `B` |
 | `!unbury` | `<target>` | Unbury player | `B` |
 | `!unfreeze` | `<target>` | Unfreeze player | `B` |
+| `!who` | `<target>` | Shows player info: name, flags, admingroup, SteamID, IP, country, etc. | `M` |
 | `!xyz` | `[target]` | Get player coords in-game | `B` |
 
 > [!TIP]<br>
